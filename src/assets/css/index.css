@@ -10,6 +10,14 @@
   font-size: 1.25rem;
 }
 
+.f-30 {
+  font-size: 30px;
+}
+
+.f-40 {
+  font-size: 2.5rem;
+}
+
 .fw-600 {
   font-weight: 600;
 }
@@ -32,4 +40,20 @@
 
 .color-orange {
   color: #ff7f00;
+}
+
+.container {
+  width: 1440px;
+}
+
+.m-0 {
+  margin: 0 auto;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.cap {
+  text-transform: capitalize;
 }
