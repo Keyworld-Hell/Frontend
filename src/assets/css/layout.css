@@ -1,0 +1,31 @@
+header {
+  width: 100%;
+  height: 70px;
+  padding: 0 50px;
+  background: rgba(255, 255, 255);
+  opacity: 0.9;
+  z-index: 9999;
+}
+
+.header-logo {
+  margin-top: 10px;
+  width: 210px;
+  height: 50px;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-nav {
+  margin-left: auto;
+}
+
+.header-ul {
+  display: flex;
+}
+
+.header-ul li {
+  margin: 0 15px;
+}
