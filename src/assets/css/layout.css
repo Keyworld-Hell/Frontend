@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
 header {
   width: 100%;
   height: 70px;
@@ -23,14 +32,56 @@ header {
 }
 
 .header-ul {
+  margin: 0;
   display: flex;
 }
 
+.header-ul li:hover {
+  background-color: #244497;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
 .header-ul li {
-  margin: 0 15px;
+  width: 125px;
+  height: 100%;
+  padding: 20px 15px 0 15px;
+  cursor: pointer;
+}
+
+.header-menu-ul li div {
+  padding-top: 6px;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+}
+
+.header-menu-ul li div:hover {
+  background-color: #565656;
+  transition: 0.2s ease-in-out;
+}
+
+.header-menu-ul {
+  display: flex;
+  margin: 0;
+}
+
+.header-menu-ul li {
+  width: 125px;
+  height: 100%;
+  padding: 20px 15px 0 15px;
 }
 
 footer {
   background-color: #000;
   height: 200px;
+}
+
+.header-menu {
+  position: absolute;
+  height: 600px;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  animation: fadeIn;
 }

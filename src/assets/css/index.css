@@ -57,3 +57,11 @@
 .cap {
   text-transform: capitalize;
 }
+
+.none {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
