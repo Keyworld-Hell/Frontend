@@ -39,7 +39,9 @@ const Header = () => {
             >
               제품소개
             </li>
-            <li>문의하기</li>
+            <a href="/inquiry" className="color-black">
+              <li>문의하기</li>
+            </a>
             <li>게시판</li>
             <li>영어</li>
           </ul>

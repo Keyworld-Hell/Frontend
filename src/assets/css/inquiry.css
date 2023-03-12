@@ -1,0 +1,110 @@
+.inquiry-img {
+  width: 100%;
+  height: 400px;
+  margin-top: -70px;
+  position: relative;
+  background: url(../img/inquiry.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.inquiry-text {
+  width: 100%;
+  padding-left: 60px;
+  line-height: 200%;
+  margin-bottom: 50px;
+}
+
+.inquiry-form {
+  margin-bottom: 100px;
+}
+
+.inquiry-container {
+  width: 1300px;
+  /* height: 1300px; */
+  padding: 55px;
+  border-radius: 15px;
+  border: 4px solid #244497;
+}
+
+.inquiry-privacy {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.inquiry-subtitle {
+  margin-bottom: 10px;
+}
+
+.inquiry-privacy textarea {
+  width: 100%;
+  height: 300px;
+  resize: vertical;
+}
+
+.inquiry-input {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.inquiry-input input {
+  width: 100%;
+  height: 50px;
+  padding: 10px 5px;
+  border: 0;
+  border-bottom: 2px solid #244497;
+}
+
+.inquiry-content {
+  border: 2px solid #244497;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  height: 300px;
+  padding: 20px;
+  width: 100%;
+  resize: vertical;
+}
+
+.inquiry-check {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2.5px solid #244497;
+  margin-right: 5px;
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+
+input[id="check"]:checked + label {
+  transition: 0.2s ease-in-out;
+  background-color: #244497;
+  border: 0;
+}
+
+.inquiry-btn {
+  margin-top: 30px;
+  width: 180px;
+  height: 50px;
+  border: 0;
+  background-color: #ff7f00;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.inquiry-btn:hover {
+  background-color: #ffa449;
+  transform: translateY(-2px);
+  transition: 0.3s ease-in-out;
+}

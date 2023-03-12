@@ -35,8 +35,16 @@ const HeaderMenu = ({ setIsHover }) => {
             onMouseOver={() => setIsHover(true)}
             onMouseOut={() => setIsHover(false)}
           >
-            <div>인증서</div>
-            <div>검사설비</div>
+            <div>
+              <a href={`/certificate`} className={"color-white"}>
+                인증서
+              </a>
+            </div>
+            <div>
+              <a href={`/inspect`} className={"color-white"}>
+                검사설비
+              </a>
+            </div>
           </li>
           <li
             onMouseOver={() => setIsHover(true)}
