@@ -10,15 +10,21 @@
 
 .tech-box {
   flex-wrap: wrap;
-  justify-content: space-between;
   flex-direction: row;
 }
 
 .tech-img {
-  width: 416px;
+  width: 480px;
   height: 700px;
+  padding: 32px;
 }
 
 .tech-img img {
-  width: 100%;
+  width: 416px;
+  height: 588px;
+  margin-bottom: 10px;
+}
+
+.tech-inspect {
+  border-radius: 15px;
 }

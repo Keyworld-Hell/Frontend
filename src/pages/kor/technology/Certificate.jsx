@@ -12,35 +12,35 @@ const Certificate = () => {
       <div className="tech-box container m-0 flex">
         <div className="tech-img">
           <img src={img} alt={img} />
-          <div className="tech-text f-20 fw-600">ISO-9001</div>
+          <div className="tech-text f-24 fw-600">ISO-9001</div>
         </div>
         <div className="tech-img">
           <img src={img} alt={img} />
-          <div className="tech-text f-20 fw-600">ISO-9001</div>
+          <div className="tech-text f-24 fw-600">ISO-9001</div>
         </div>
         <div className="tech-img">
           <img src={img} alt={img} />
-          <div className="tech-text f-20 fw-600">ISO-9001</div>
+          <div className="tech-text f-24 fw-600">ISO-9001</div>
         </div>
         <div className="tech-img">
           <img src={img} alt={img} />
-          <div className="tech-text f-20 fw-600">ISO-9001</div>
+          <div className="tech-text f-24 fw-600">ISO-9001</div>
         </div>
         <div className="tech-img">
           <img src={img} alt={img} />
-          <div className="tech-text f-20 fw-600">ISO-9001</div>
+          <div className="tech-text f-24 fw-600">ISO-9001</div>
         </div>
         <div className="tech-img">
           <img src={img} alt={img} />
-          <div className="tech-text f-20 fw-600">ISO-9001</div>
+          <div className="tech-text f-24 fw-600">ISO-9001</div>
         </div>
         <div className="tech-img">
           <img src={img} alt={img} />
-          <div className="tech-text f-20 fw-600">ISO-9001</div>
+          <div className="tech-text f-24 fw-600">ISO-9001</div>
         </div>
         <div className="tech-img">
           <img src={img} alt={img} />
-          <div className="tech-text f-20 fw-600">ISO-9001</div>
+          <div className="tech-text f-24 fw-600">ISO-9001</div>
         </div>
       </div>
     </>
