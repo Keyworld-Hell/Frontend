@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeaderMenu = ({ setIsHover }) => {
   return (
@@ -9,10 +10,26 @@ const HeaderMenu = ({ setIsHover }) => {
             onMouseOver={() => setIsHover(true)}
             onMouseOut={() => setIsHover(false)}
           >
-            <div>CEO인사말</div>
-            <div>조직도</div>
-            <div>미래</div>
-            <div>오시는 길</div>
+            <div>
+              <a href={`/greeting`} className={"color-white"}>
+                CEO인사말
+              </a>
+            </div>
+            <div>
+              <a href={`/organization`} className={"color-white"}>
+                조직도
+              </a>
+            </div>
+            <div>
+              <a href={`/future`} className={"color-white"}>
+                미래
+              </a>
+            </div>
+            <div>
+              <a href={`/contact`} className={"color-white"}>
+                오시는 길
+              </a>
+            </div>
           </li>
           <li
             onMouseOver={() => setIsHover(true)}

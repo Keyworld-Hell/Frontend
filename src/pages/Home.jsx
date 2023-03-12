@@ -5,7 +5,7 @@ import product1 from "../assets/img/kiosk.jpg";
 const Home = () => {
   return (
     <>
-      <div className="home-img center">
+      <div className="back-img home-img center">
         <div className="home-text fw-600 color-blue">Quality & Trust</div>
         <div className="home-sub-text fw-600 color-white">
           <span className="color-orange">키월드</span>의 도전은 계속됩니다

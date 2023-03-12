@@ -1,0 +1,24 @@
+.technology-img {
+  width: 100%;
+  height: 400px;
+  margin-top: -70px;
+  position: relative;
+  background: url(../img/technology.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.tech-box {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.tech-img {
+  width: 416px;
+  height: 700px;
+}
+
+.tech-img img {
+  width: 100%;
+}
