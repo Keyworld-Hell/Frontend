@@ -10,6 +10,7 @@ import "./assets/css/company.css";
 import "./assets/css/technology.css";
 import "./assets/css/inquiry.css";
 import "./assets/css/board.css";
+import "./assets/css/product.css";
 
 import Footer from "./components/layout/Footer";
 import Greeting from "./pages/kor/company/Greetings";
@@ -21,6 +22,8 @@ import Inspect from "./pages/kor/technology/Inspect";
 import Inquiry from "./pages/kor/inquiry/Inquiry";
 import Board from "./pages/kor/board/Board";
 import BoardDetail from "./pages/kor/board/BoardDetail";
+import Product from "./pages/kor/product/Product";
+import ProductDetail from "./pages/kor/product/ProductDetail";
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
 
         <Route path="/certificate" element={<Certificate />} />
         <Route path="/inspect" element={<Inspect />} />
+
+        <Route path="/product/:lock" element={<Product />} />
+        <Route path="/product/:lock/:id" element={<ProductDetail />} />
 
         <Route path="/inquiry" element={<Inquiry />} />
 

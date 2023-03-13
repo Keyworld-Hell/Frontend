@@ -50,7 +50,11 @@ const HeaderMenu = ({ setIsHover }) => {
             onMouseOver={() => setIsHover(true)}
             onMouseOut={() => setIsHover(false)}
           >
-            <div>원형 록</div>
+            <div>
+              <a href={`/product/circularlock`} className={"color-white"}>
+                원형 록
+              </a>
+            </div>
             <div>딤플 록</div>
             <div>디스크 록</div>
             <div>스위치 록</div>
