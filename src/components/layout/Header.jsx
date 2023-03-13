@@ -42,7 +42,9 @@ const Header = () => {
             <a href="/inquiry" className="color-black">
               <li>문의하기</li>
             </a>
-            <li>게시판</li>
+            <a href="/board" className="color-black">
+              <li>게시판</li>
+            </a>
             <li>영어</li>
           </ul>
         </nav>
