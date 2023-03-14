@@ -5,6 +5,8 @@ const Admin = () => {
   const fileRef = useRef();
   const [fileName, setFileName] = useState("");
   const [fileImg, setFileImg] = useState();
+  const [activeSubIndex, setActiveSubIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const previewImg = () => {
     const file = fileRef.current.files[0];
@@ -17,7 +19,12 @@ const Admin = () => {
 
   return (
     <div className="flex">
-      <AdminNav />
+      <AdminNav
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+        activeSubIndex={activeSubIndex}
+        setActiveSubIndex={setActiveSubIndex}
+      />
       <div className="admin-container container m-0">
         <div className="admin-title flex f-20 fw-600">
           IMAGE

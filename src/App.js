@@ -11,6 +11,7 @@ import "./assets/css/layout.css";
 import Footer from "./components/layout/Footer";
 import Admin from "./pages/admin/Admin";
 import AdminHeader from "./components/layout/AdminHeader";
+import AdminNotice from "./pages/admin/AdminNotice";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/notice" element={<AdminNotice />} />
+        <Route path="/admin/notice/register" element={<Admin />} />
       </Routes>
       {/* <Footer /> */}
     </div>
