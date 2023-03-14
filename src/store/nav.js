@@ -48,4 +48,14 @@ export const NAV_SUB_LIST = [
       },
     ],
   },
+  {
+    contents: [
+      {
+        title: "korea",
+      },
+      {
+        title: "english",
+      },
+    ],
+  },
 ];
