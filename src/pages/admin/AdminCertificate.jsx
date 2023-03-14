@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import AdminNav from "../../components/layout/AdminNav";
 
 import img from "../../assets/img/inspect.png";
+import { Link } from "react-router-dom";
 
 const AdminCertificate = () => {
   const fileRef = useRef();
@@ -23,7 +24,9 @@ const AdminCertificate = () => {
             <input className="admin-search-input f-20" placeholder="검색" />
             <button className="admin-search-btn color-white">search</button>
           </div>
-          <button className="admin-upload-btn  color-white">등록</button>
+          <Link to={`/admin/certificate/upload`} className="color-white flex">
+            <button className="admin-upload-btn  color-white">등록</button>
+          </Link>
         </div>
         <div className="admin-tech-container flex">
           <div className="admin-tech-contents flex">

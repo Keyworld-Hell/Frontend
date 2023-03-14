@@ -14,6 +14,7 @@ import AdminHeader from "./components/layout/AdminHeader";
 import AdminNotice from "./pages/admin/AdminNotice";
 import AdminCertificate from "./pages/admin/AdminCertificate";
 import AdminInspect from "./pages/admin/AdminInspect";
+import AdminTechUpload from "./pages/admin/AdminTechUpload";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/admin/product/circular" element={<Admin />} />
         <Route path="/admin/inquiry" element={<Admin />} />
         <Route path="/admin/board" element={<Admin />} />
+        <Route path="/admin/:title/upload" element={<AdminTechUpload />} />
       </Routes>
       {/* <Footer /> */}
     </div>

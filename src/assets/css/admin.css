@@ -91,6 +91,10 @@
   border: 0 !important;
 }
 
+.admin-title a {
+  margin-left: auto;
+}
+
 .admin-upload-btn {
   margin-left: auto;
   width: 130px;
@@ -298,4 +302,11 @@
   width: 25px;
   height: 25px;
   background-color: #dd2727;
+}
+
+.admin-upload-tech-name {
+  margin-top: 20px;
+  width: 350px;
+  height: 50px;
+  padding: 10px;
 }
