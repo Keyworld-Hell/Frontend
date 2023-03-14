@@ -1,9 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import AdminNav from "../../components/layout/AdminNav";
 
 const AdminNotice = () => {
-  const fileRef = useRef();
-
   const [activeSubIndex, setActiveSubIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
