@@ -3,7 +3,7 @@ import { NAV_LIST, NAV_SUB_LIST } from "../../store/nav";
 
 const AdminNav = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [activeSubIndex, setActiveSubIndex] = useState(-1);
+  const [activeSubIndex, setActiveSubIndex] = useState(0);
 
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -19,6 +19,7 @@ const AdminNav = () => {
         <ul>
           {NAV_LIST.map((item, index) => (
             <li
+              key={index}
               className={activeIndex === index ? "nav-clicked" : ""}
               onClick={() => {
                 handleClick(index);
@@ -37,6 +38,7 @@ const AdminNav = () => {
               index === activeIndex &&
               item.contents.map((item, index) => (
                 <li
+                  key={index}
                   className={activeSubIndex === index ? "nav-sub-clicked" : ""}
                   onClick={() => handleSubClick(index)}
                 >
