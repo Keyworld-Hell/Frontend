@@ -7,7 +7,7 @@ import Modal from "../../../components/layout/Modal";
 
 const Certificate = () => {
   const [isHover, setIsHover] = useState(false);
-  const [isModal, setIsModal] = useState(true);
+  const [isModal, setIsModal] = useState(false);
 
   const hoverHandler = (isHover) => {
     setIsHover(isHover);
