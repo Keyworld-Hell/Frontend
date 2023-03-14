@@ -16,6 +16,7 @@ import AdminCertificate from "./pages/admin/AdminCertificate";
 import AdminInspect from "./pages/admin/AdminInspect";
 import AdminTechUpload from "./pages/admin/AdminTechUpload";
 import AdminProduct from "./pages/admin/AdminProduct";
+import AdminInquiry from "./pages/admin/AdminInquiry";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
         <Route path="/admin/certificate" element={<AdminCertificate />} />
         <Route path="/admin/inspect" element={<AdminInspect />} />
         <Route path="/admin/product/:lock" element={<AdminProduct />} />
-        <Route path="/admin/inquiry" element={<Admin />} />
+        <Route path="/admin/inquiry" element={<AdminInquiry />} />
         <Route path="/admin/board" element={<Admin />} />
         <Route path="/admin/:title/upload" element={<AdminTechUpload />} />
       </Routes>

@@ -314,3 +314,21 @@
 .admin-product-container {
   width: 1350px;
 }
+
+/* Inquiry*/
+
+.admin-inquiry-date {
+  width: 150px;
+}
+
+.admin-inquiry-name {
+  width: 300px;
+}
+
+.admin-inquiry-content {
+  width: 840px;
+}
+
+.admin-inquiry-delete {
+  width: 150px;
+}
