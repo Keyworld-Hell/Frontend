@@ -27,6 +27,10 @@ function App() {
         <Route path="/admin/notice" element={<AdminNotice />} />
         <Route path="/admin/notice/register" element={<Admin />} />
         <Route path="/admin/certificate" element={<AdminCertificate />} />
+        <Route path="/admin/inspect" element={<AdminInspect />} />
+        <Route path="/admin/product/circular" element={<Admin />} />
+        <Route path="/admin/inquiry" element={<Admin />} />
+        <Route path="/admin/board" element={<Admin />} />
       </Routes>
       {/* <Footer /> */}
     </div>
