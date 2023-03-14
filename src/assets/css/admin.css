@@ -214,6 +214,11 @@
   width: 140px;
 }
 
+.admin-tech-search {
+  border: 0;
+  padding: 0 24px;
+}
+
 .admin-search {
   position: relative;
 }
@@ -250,17 +255,23 @@
 
 .admin-tech-container {
   width: 100%;
-  margin-top: 70px;
-  justify-content: space-between;
+  margin-top: 40px;
+  flex-direction: row;
   flex-wrap: wrap;
+}
+
+.admin-tech-contents {
+  width: 288px;
+  height: 450px;
+  align-items: center;
+  justify-content: center;
 }
 
 .admin-tech-box {
   position: relative;
-  width: 241px;
+  width: 240px;
   height: 400px;
   border: 1px solid #244497;
-  margin-bottom: 62px;
 }
 
 .admin-tech-img {
