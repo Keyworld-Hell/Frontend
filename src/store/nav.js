@@ -156,3 +156,65 @@ export const PRODUCT_NAV_LIST = [
     korName: "개발",
   },
 ];
+
+export const INQUIRY_LIST = [
+  {
+    id: 0,
+    created_date: "2023.03.16",
+    company: "현진 하드웨어",
+    name: "김진우",
+    email: "rlawlsdn316@gmail.com",
+    phone: "010-5321-8681",
+    content: "안녕하세요 헤헤",
+  },
+  {
+    id: 1,
+    created_date: "2023.03.16",
+    company: "샘숭",
+    name: "김진우",
+    email: "rlawlsdn316@gmail.com",
+    phone: "010-5321-8681",
+    content:
+      "안녕하세요 헤헤안녕하세요 헤헤안녕하세요 헤헤안녕하세요 헤헤안녕하세요 헤헤안녕하세요 헤헤",
+  },
+  {
+    id: 2,
+    created_date: "2023.03.16",
+    name: "김진우",
+    company: "롯데",
+    email: "rlawlsdn316@gmail.com",
+    phone: "010-5321-8681",
+    content:
+      "엘롯기엘롯기엘롯기엘롯기엘롯기엘롯기엘롯기엘롯기엘롯기엘롯기엘롯기",
+  },
+  {
+    id: 3,
+    created_date: "2023.03.16",
+    name: "김진우",
+    company: "신세계",
+    email: "rlawlsdn316@gmail.com",
+    phone: "010-5321-8681",
+    content:
+      "신세계신세계신세계신세계신세계신세계신세계신세계신세계신세계신세계신세계",
+  },
+  {
+    id: 4,
+    created_date: "2023.03.16",
+    name: "김진우",
+    company: "카카오",
+    email: "rlawlsdn316@gmail.com",
+    phone: "010-5321-8681",
+    content:
+      "카카오카카오카카오카카오카카오카카오카카오카카오카카오카카오카카오카카오",
+  },
+  {
+    id: 5,
+    created_date: "2023.03.16",
+    name: "김진우",
+    company: "피파",
+    email: "rlawlsdn316@gmail.com",
+    phone: "010-5321-8681",
+    content:
+      "루드 굴리트루드 굴리트루드 굴리트루드 굴리트루드 굴리트루드 굴리트",
+  },
+];

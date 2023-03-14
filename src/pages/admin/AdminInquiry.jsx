@@ -1,20 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
+import { INQUIRY_LIST } from "../../store/nav";
 
 const AdminInquiry = () => {
-  const fileRef = useRef();
-  const [fileName, setFileName] = useState("");
-  const [fileImg, setFileImg] = useState();
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(4);
 
-  const previewImg = () => {
-    const file = fileRef.current.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onloadend = () => {
-      setFileImg(reader.result);
-    };
+  const subContent = (content) => {
+    if (content.length > 15) {
+      return content.substr(15) + "...";
+    } else return content;
   };
 
   return (
@@ -32,38 +28,18 @@ const AdminInquiry = () => {
           <div className="admin-inquiry-content">내용</div>
           <div className="admin-inquiry-delete">삭제</div>
         </div>
-        <div className="admin-notice-box center flex">
-          <div className="admin-inquiry-date">2023.03.16</div>
-          <div className="admin-inquiry-name">현진 하드웨어</div>
-          <div className="admin-inquiry-content">
-            여름휴가 안녕하세요 키월드
-          </div>
-          <div className="admin-inquiry-delete">삭제</div>
-        </div>
-        <div className="admin-notice-box center flex">
-          <div className="admin-inquiry-date">2023.03.16</div>
-          <div className="admin-inquiry-name">현진 하드웨어</div>
-          <div className="admin-inquiry-content">
-            여름휴가 안녕하세요 키월드
-          </div>
-          <div className="admin-inquiry-delete">삭제</div>
-        </div>
-        <div className="admin-notice-box center flex">
-          <div className="admin-inquiry-date">2023.03.16</div>
-          <div className="admin-inquiry-name">현진 하드웨어</div>
-          <div className="admin-inquiry-content">
-            여름휴가 안녕하세요 키월드
-          </div>
-          <div className="admin-inquiry-delete">삭제</div>
-        </div>
-        <div className="admin-notice-box center flex">
-          <div className="admin-inquiry-date">2023.03.16</div>
-          <div className="admin-inquiry-name">현진 하드웨어</div>
-          <div className="admin-inquiry-content">
-            여름휴가 안녕하세요 키월드
-          </div>
-          <div className="admin-inquiry-delete">삭제</div>
-        </div>
+        {INQUIRY_LIST.map((item, index) => (
+          <Link to={`${item.id}`} className="color-black" key={index}>
+            <div className="admin-notice-box center flex">
+              <div className="admin-inquiry-date">{item.created_date}</div>
+              <div className="admin-inquiry-name">{item.company}</div>
+              <div className="admin-inquiry-content">
+                {subContent(item.content)}
+              </div>
+              <div className="admin-inquiry-delete">삭제</div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
