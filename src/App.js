@@ -19,6 +19,7 @@ import AdminProduct from "./pages/admin/AdminProduct";
 import AdminInquiry from "./pages/admin/AdminInquiry";
 import AdminBoard from "./pages/admin/AdminBoard";
 import AdminInquiryDetail from "./pages/admin/AdminInquiryDetail";
+import AdminBoardDetail from "./pages/admin/AdminBoardDetail";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/admin/inquiry" element={<AdminInquiry />} />
         <Route path="/admin/inquiry/:id" element={<AdminInquiryDetail />} />
         <Route path="/admin/board" element={<AdminBoard />} />
+        <Route path="/admin/board/:id" element={<AdminBoardDetail />} />
         <Route path="/admin/:title/upload" element={<AdminTechUpload />} />
       </Routes>
       {/* <Footer /> */}

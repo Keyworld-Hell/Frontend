@@ -505,3 +505,123 @@ input[id="check"]:checked + label {
 .board-pagination {
   margin-top: 40px;
 }
+
+.board-detail-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #244497;
+  height: 50px;
+  align-items: center;
+  color: #244497;
+}
+
+.board-detail-content {
+  border: 1.5px solid #244497;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  height: 400px;
+  padding: 50px;
+  width: 100%;
+  resize: vertical;
+}
+
+.board-comment-title {
+  height: 55px;
+  margin-top: 30px;
+  align-items: center;
+  border-bottom: 4px solid #ff7f00;
+}
+
+.board-comment {
+  margin-top: 40px;
+}
+
+.board-comment-subtitle {
+  width: 100%;
+}
+
+.board-comment-date {
+  float: right;
+  margin-left: auto;
+}
+
+.board-comment-content {
+  margin-top: 10px;
+  border: 0.5px solid #244497;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.board-comment-upload {
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1.5px solid #244497;
+}
+
+.board-comment-upload-name {
+  width: 200px;
+  padding: 5px 5px 5px 10px;
+  margin-bottom: 10px;
+}
+
+.board-comment-upload-content {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.board-comment-btn {
+  margin-left: auto;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  background: #ff7f00;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.board-comment-btn:hover {
+  background: #ff942a;
+  transition: 0.2s ease-in-out;
+}
+
+.board-list-btn {
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 120px;
+  height: 40px;
+  border: 0;
+  background: #244497;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.board-list-btn:hover {
+  background: #4a6fcb;
+  transition: 0.3s ease-in-out;
+}
+
+.admin-board-delete-btn {
+  border: 0;
+  background: red;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.admin-board-delete-btn:hover {
+  background: rgb(255, 75, 75);
+}
