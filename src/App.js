@@ -13,7 +13,6 @@ import "./assets/css/inquiry.css";
 import "./assets/css/board.css";
 import "./assets/css/product.css";
 
-import Footer from "./components/layout/Footer";
 import Admin from "./pages/admin/Admin";
 import AdminHeader from "./components/layout/AdminHeader";
 import AdminNotice from "./pages/admin/AdminNotice";
@@ -25,7 +24,6 @@ import AdminInquiry from "./pages/admin/AdminInquiry";
 import AdminBoard from "./pages/admin/AdminBoard";
 import AdminInquiryDetail from "./pages/admin/AdminInquiryDetail";
 import AdminBoardDetail from "./pages/admin/AdminBoardDetail";
-
 
 import Footer from "./components/layout/Footer";
 import Greeting from "./pages/kor/company/Greetings";
@@ -47,23 +45,17 @@ function App() {
       <AdminHeader />
       <Routes>
         <Route path="/" element={<Home />} />
-        
         <Route path="/greeting" element={<Greeting />} />
         <Route path="/organization" element={<Organization />} />
         <Route path="/future" element={<Future />} />
         <Route path="/contact" element={<Contact />} />
-
         <Route path="/certificate" element={<Certificate />} />
         <Route path="/inspect" element={<Inspect />} />
-
         <Route path="/product/:lock" element={<Product />} />
         <Route path="/product/:lock/:id" element={<ProductDetail />} />
-
         <Route path="/inquiry" element={<Inquiry />} />
-
         <Route path="/board" element={<Board />} />
         <Route path="/board/:id" element={<BoardDetail />} />
-        
         //admin
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin/notice" element={<AdminNotice />} />
