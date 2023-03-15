@@ -422,3 +422,86 @@ input[id="check"]:checked + label {
   transform: translateY(-2px);
   transition: 0.3s ease-in-out;
 }
+
+/*Board*/
+
+.admin-board {
+  padding-top: 50px;
+}
+
+.board-container {
+  width: 1300px;
+  padding: 55px;
+  border-radius: 15px;
+  border: 4px solid #244497;
+  margin-bottom: 70px;
+}
+
+.board-subtitle {
+  padding: 0 70px;
+  margin-bottom: 50px;
+}
+
+.board-btn {
+  float: right;
+  width: 133px;
+  height: 44px;
+  background: #ff7f00;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.board-btn:hover {
+  background: #ff942a;
+  transition: 0.2s ease-in-out;
+}
+
+.board-header {
+  width: 100%;
+  height: 55px;
+  align-items: center;
+  border-bottom: 2px solid #244497;
+  margin-bottom: 25px;
+}
+
+.admin-board-id {
+  width: 30px;
+}
+
+.admin-board-name {
+  width: 150px;
+}
+
+.admin-board-title {
+  width: 770px;
+}
+
+.admin-board-date {
+  width: 132px;
+}
+
+.admin-board-delete {
+  width: 100px;
+}
+
+.board-content {
+  border: 1px solid #244497;
+  height: 55px;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.board-content:hover {
+  background: #f0f0f0;
+  transition: 0.3s ease-in-out;
+  scale: 1.005;
+}
+
+.board-pagination {
+  margin-top: 40px;
+}

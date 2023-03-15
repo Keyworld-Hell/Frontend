@@ -17,6 +17,7 @@ import AdminInspect from "./pages/admin/AdminInspect";
 import AdminTechUpload from "./pages/admin/AdminTechUpload";
 import AdminProduct from "./pages/admin/AdminProduct";
 import AdminInquiry from "./pages/admin/AdminInquiry";
+import AdminBoard from "./pages/admin/AdminBoard";
 import AdminInquiryDetail from "./pages/admin/AdminInquiryDetail";
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
         <Route path="/admin/product/:lock" element={<AdminProduct />} />
         <Route path="/admin/inquiry" element={<AdminInquiry />} />
         <Route path="/admin/inquiry/:id" element={<AdminInquiryDetail />} />
-        <Route path="/admin/board" element={<Admin />} />
+        <Route path="/admin/board" element={<AdminBoard />} />
         <Route path="/admin/:title/upload" element={<AdminTechUpload />} />
       </Routes>
       {/* <Footer /> */}
