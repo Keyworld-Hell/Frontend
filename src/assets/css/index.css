@@ -6,6 +6,10 @@
   float: right;
 }
 
+.f-18 {
+  font-size: 18px;
+}
+
 .f-20 {
   font-size: 1.25rem;
 }
@@ -64,4 +68,12 @@
 
 .cap {
   text-transform: capitalize;
+}
+
+.none {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
 }

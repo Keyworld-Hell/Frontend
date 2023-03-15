@@ -1,0 +1,62 @@
+.technology-img {
+  width: 100%;
+  height: 400px;
+  margin-top: -70px;
+  position: relative;
+  background: url(../img/technology.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.tech-box {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.tech-img {
+  width: 480px;
+  height: 700px;
+  padding: 32px;
+}
+
+.tech-img-detail {
+  position: relative;
+}
+
+.tech-img-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  top: 45%;
+  left: 30%;
+  width: 150px;
+  background: #b2b2b2;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.tech-imgs {
+  width: 416px;
+  height: 588px;
+  margin-bottom: 10px;
+}
+
+.tech-img-detail:hover .tech-img-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tech-imgs:hover {
+  opacity: 0.7;
+}
+
+.tech-img-text:hover + img {
+  opacity: 0.7;
+}
+
+.tech-inspect {
+  border-radius: 15px;
+}
