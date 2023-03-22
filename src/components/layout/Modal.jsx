@@ -27,7 +27,7 @@ const Modal = (props) => {
         >
           X
         </button>
-        <div className="modal-content flex">
+        <div className="modal-content container flex">
           <img src={props.img} alt={props.img} />
         </div>
       </div>

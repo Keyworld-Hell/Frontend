@@ -6,6 +6,7 @@ const Inquiry = () => {
   return (
     <>
       <PageImage img={"inquiry-img"} title="Inquiry" />
+
       <PageTitle title={"고객문의"} />
       <div className="container m-0">
         <div className="inquiry-text f-24 fw-600">
@@ -15,32 +16,32 @@ const Inquiry = () => {
         <form action="" className="inquiry-form">
           <div className="inquiry-container m-0">
             <div className="inquiry-privacy">
-              <div className="inquiry-subtitle f-20 fw-700">
+              <div className="inquiry-subtitle f-20 fw-600">
                 개인정보 처리 방침
               </div>
-              <textarea>hi</textarea>
+              <textarea readOnly>hi</textarea>
             </div>
             <div className="inquiry-input">
-              <div className="inquiry-subtitle f-20 fw-700">상호명</div>
+              <div className="inquiry-subtitle f-20 fw-600">-상호명-</div>
               <input className="f-20" />
             </div>
             <div className="inquiry-input">
-              <div className="inquiry-subtitle f-20 fw-700">담당자 이름</div>
+              <div className="inquiry-subtitle f-20 fw-600">-담당자 이름-</div>
               <input className="f-20" />
             </div>
             <div className="inquiry-input">
-              <div className="inquiry-subtitle f-20 fw-700">이메일</div>
+              <div className="inquiry-subtitle f-20 fw-600">-이메일-</div>
               <input className="f-20" type="email" />
             </div>
             <div className="inquiry-input">
-              <div className="inquiry-subtitle f-20 fw-700">연락처</div>
+              <div className="inquiry-subtitle f-20 fw-600">-연락처-</div>
               <input className="f-20" />
             </div>
             <div className="inquiry-input">
-              <div className="inquiry-subtitle f-20 fw-700">문의 내용</div>
+              <div className="inquiry-subtitle f-20 fw-600">-문의 내용-</div>
               <textarea className="inquiry-content f-20" />
             </div>
-            <div className="inquiry-check f-20 fw-600">
+            <div className="inquiry-check f-18 fw-600">
               <input type="checkbox" id="check" />
               <label for="check" />
               개인 정보 처리 방침에 동의합니다.

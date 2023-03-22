@@ -1,12 +1,16 @@
 header {
+  position: fixed;
+  justify-content: center;
   width: 100%;
   height: 70px;
-  padding: 0 50px;
   background: rgba(255, 255, 255);
   opacity: 0.9;
   z-index: 111111;
 }
-
+.header-container {
+  width: 100%;
+  max-width: 1920px;
+}
 .header-logo {
   margin-top: 10px;
   width: 210px;
@@ -34,7 +38,7 @@ header {
 }
 
 .header-ul li {
-  width: 125px;
+  width: 150px;
   height: 100%;
   padding: 20px 15px 0 15px;
   cursor: pointer;
@@ -58,18 +62,20 @@ header {
 }
 
 .header-menu-ul li {
-  width: 125px;
+  width: 150px;
   height: 100%;
   padding: 20px 15px 0 15px;
 }
 
 footer {
+  min-width: 380px;
   background-color: #000;
   height: 200px;
 }
 
 .header-menu {
-  position: absolute;
+  position: fixed;
+  margin-top: 70px;
   height: 600px;
   width: 100%;
   background-color: #000;
@@ -100,13 +106,17 @@ footer {
   border-bottom: 2px solid #ff7f00;
   margin-top: 100px;
   margin-bottom: 50px;
-  padding-left: 60px;
-  font-size: 50px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 42px;
+  text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+}
+.greeting-title {
+  padding-top: 170px;
+  font-size: 60px;
 }
 
 .page-line {
-  height: 20px;
+  min-width: 380px;
+  height: 10px;
   background-color: #244497;
 }
 
@@ -125,19 +135,20 @@ footer {
 }
 
 .modal-container {
-  width: 1200px;
+  width: 1920px;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
 .modal-content {
-  width: 100%;
+  /* width: 100%;
   justify-content: center;
-  padding: 20px;
+  padding: 20px; */
 }
 
 .modal-content img {
-  width: 800px !important;
-  height: 1000px !important;
+  object-fit: contain;
 }
 
 .modal-btn {
@@ -151,4 +162,80 @@ footer {
 
 .modal-btn:hover {
   background-color: #565656;
+}
+
+@media (min-width: 1921px) {
+  header {
+    padding: 0 50px;
+  }
+  .page-title {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 1920px) and (min-width: 1441px) {
+  header {
+    padding: 0 50px;
+  }
+  .page-title {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+  header {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 801px) {
+  .page-title {
+    height: 48px;
+    border-bottom: 2px solid #ff7f00;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .greeting-title {
+    padding-top: 100px;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 501px) {
+  .page-title {
+    height: 48px;
+    border-bottom: 2px solid #ff7f00;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    font-size: 30px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .greeting-title {
+    padding-top: 100px;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .page-title {
+    height: 40px;
+    border-bottom: 2px solid #ff7f00;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    font-size: 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .greeting-title {
+    padding-top: 100px;
+    font-size: 32px;
+  }
+  .page-line {
+    width: 100%;
+    height: 5px;
+    background-color: #244497;
+  }
 }

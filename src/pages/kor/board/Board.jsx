@@ -12,7 +12,7 @@ const Board = () => {
       <PageImage img={"board-img"} title="Board" />
       <PageTitle title={"게시판"} />
       <div className="container m-0">
-        <div className="board-subtitle f-24 fw-600">
+        <div className="board-subtitle flex f-24 fw-600">
           이 곳은 자유롭게 소통이 가능한 게시판입니다.
           <button className="board-btn f-24 fw-600 color-white">글쓰기</button>
         </div>
@@ -28,8 +28,8 @@ const Board = () => {
               <div className="board-content f-18 flex center">
                 <div className="board-id ">{item.id}</div>
                 <div className="board-name ">{item.name}</div>
-                <div className="board-title">{item.title}</div>
-                <div className="board-date ">{item.created_date}</div>
+                <div className="board-title center">{item.title}</div>
+                <div className="board-date right ">{item.created_date}</div>
               </div>
             </Link>
           ))}

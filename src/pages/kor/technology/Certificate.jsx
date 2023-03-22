@@ -17,58 +17,60 @@ const Certificate = () => {
     <>
       <PageImage img={"technology-img"} title="Technology" />
       <PageTitle title={"인증서"} />
-      <div className="tech-box container m-0 flex">
-        <div className="tech-img">
-          <div className="tech-img-detail">
-            <div
-              className="tech-img-text flex f-30 color-white"
-              onClick={() => setIsModal(true)}
-            >
-              상세보기
+      <div className="container m-0">
+        <div className="tech-box flex">
+          <div className="tech-img">
+            <div className="tech-img-detail">
+              <div
+                className="tech-img-text flex f-30 color-white"
+                onClick={() => setIsModal(true)}
+              >
+                상세보기
+              </div>
+              <img className="tech-imgs" src={img} alt={img} />
+              {isModal && <Modal setIsModal={setIsModal} img={img} />}
             </div>
-            <img className="tech-imgs" src={img} alt={img} />
-            {isModal && <Modal setIsModal={setIsModal} img={img} />}
+            <div className="tech-text f-24 fw-600">ISO-9001</div>
           </div>
-          <div className="tech-text f-24 fw-600">ISO-9001</div>
-        </div>
-        <div className="tech-img">
-          <div className="tech-img-detail">
-            <div
-              className="tech-img-text flex f-30 color-white"
-              onClick={() => setIsModal(true)}
-            >
-              상세보기
+          <div className="tech-img">
+            <div className="tech-img-detail">
+              <div
+                className="tech-img-text flex f-30 color-white"
+                onClick={() => setIsModal(true)}
+              >
+                상세보기
+              </div>
+              <img className="tech-imgs" src={img} alt={img} />
+              {isModal && <Modal setIsModal={setIsModal} img={img} />}
             </div>
-            <img className="tech-imgs" src={img} alt={img} />
-            {isModal && <Modal setIsModal={setIsModal} img={img} />}
+            <div className="tech-text f-24 fw-600">ISO-9001</div>
           </div>
-          <div className="tech-text f-24 fw-600">ISO-9001</div>
-        </div>
-        <div className="tech-img">
-          <div className="tech-img-detail">
-            <div
-              className="tech-img-text flex f-30 color-white"
-              onClick={() => setIsModal(true)}
-            >
-              상세보기
+          <div className="tech-img">
+            <div className="tech-img-detail">
+              <div
+                className="tech-img-text flex f-30 color-white"
+                onClick={() => setIsModal(true)}
+              >
+                상세보기
+              </div>
+              <img className="tech-imgs" src={img} alt={img} />
+              {isModal && <Modal setIsModal={setIsModal} img={img} />}
             </div>
-            <img className="tech-imgs" src={img} alt={img} />
-            {isModal && <Modal setIsModal={setIsModal} img={img} />}
+            <div className="tech-text f-24 fw-600">ISO-9001</div>
           </div>
-          <div className="tech-text f-24 fw-600">ISO-9001</div>
-        </div>
-        <div className="tech-img">
-          <div className="tech-img-detail">
-            <div
-              className="tech-img-text flex f-30 color-white"
-              onClick={() => setIsModal(true)}
-            >
-              상세보기
+          <div className="tech-img">
+            <div className="tech-img-detail">
+              <div
+                className="tech-img-text flex f-30 color-white"
+                onClick={() => setIsModal(true)}
+              >
+                상세보기
+              </div>
+              <img className="tech-imgs" src={img} alt={img} />
+              {isModal && <Modal setIsModal={setIsModal} img={img} />}
             </div>
-            <img className="tech-imgs" src={img} alt={img} />
-            {isModal && <Modal setIsModal={setIsModal} img={img} />}
+            <div className="tech-text f-24 fw-600">ISO-9001</div>
           </div>
-          <div className="tech-text f-24 fw-600">ISO-9001</div>
         </div>
       </div>
     </>

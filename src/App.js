@@ -1,5 +1,7 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+
+import ScrollToTop from "./components/layout/ScrollTop";
 import Header from "./components/layout/Header";
 
 import "./assets/css/admin.css";
@@ -16,10 +18,12 @@ import AdminHeader from "./components/layout/AdminHeader";
 import Footer from "./components/layout/Footer";
 import AdminRoutes from "./routes/AdminRoutes";
 import MainRoutes from "./routes/MainRoutes";
+import TopButton from "./components/layout/TopButton";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/*" element={<Header />} />
         <Route path="/admin/*" element={<AdminHeader />} />

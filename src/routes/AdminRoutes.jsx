@@ -11,6 +11,7 @@ import AdminInquiry from "../pages/admin/AdminInquiry";
 import AdminBoard from "../pages/admin/AdminBoard";
 import AdminInquiryDetail from "../pages/admin/AdminInquiryDetail";
 import AdminBoardDetail from "../pages/admin/AdminBoardDetail";
+import Header from "../components/layout/Header";
 
 const AdminRoutes = () => {
   return (
