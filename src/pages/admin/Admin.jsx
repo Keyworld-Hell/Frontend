@@ -18,7 +18,7 @@ const Admin = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="admin-wrap flex">
       <AdminNav
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}

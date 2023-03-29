@@ -12,20 +12,20 @@ const HeaderMenu = ({ setIsHover }) => {
               onMouseOut={() => setIsHover(false)}
             >
               <div>
-                <a href={`/greeting`} className={"color-white"}>
-                  CEO인사말
+                <a href={`/intro`} className={"color-white"}>
+                  회사 소개
                 </a>
               </div>
-              <div>
+              {/* <div>
                 <a href={`/organization`} className={"color-white"}>
                   조직도
                 </a>
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <a href={`/future`} className={"color-white"}>
                   미래
                 </a>
-              </div>
+              </div> */}
               <div>
                 <a href={`/contact`} className={"color-white"}>
                   오시는 길

@@ -8,7 +8,7 @@ const AdminBoard = () => {
   const [activeIndex, setActiveIndex] = useState(5);
 
   return (
-    <div className="flex">
+    <div className="admin-wrap flex">
       <AdminNav
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}

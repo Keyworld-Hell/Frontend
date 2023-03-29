@@ -11,7 +11,7 @@ const AdminCertificate = () => {
   const [activeIndex, setActiveIndex] = useState(1);
 
   return (
-    <div className="flex">
+    <div className="admin-wrap flex">
       <AdminNav
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}

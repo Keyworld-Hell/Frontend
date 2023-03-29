@@ -19,7 +19,7 @@ const Header = () => {
           </div>
           <nav className="header-nav f-20 flex fw-700">
             <ul className="header-ul center">
-              <a href={`/greeting`} className={"color-black"}>
+              <a href={`/intro`} className={"color-black"}>
                 <li
                   onMouseOut={() => setIsHover(false)}
                   onMouseOver={() => setIsHover(true)}

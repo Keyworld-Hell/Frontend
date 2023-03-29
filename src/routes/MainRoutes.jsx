@@ -13,23 +13,29 @@ import Board from "../pages/kor/board/Board";
 import BoardDetail from "../pages/kor/board/BoardDetail";
 import Product from "../pages/kor/product/Product";
 import ProductDetail from "../pages/kor/product/ProductDetail";
+import Footer from "../components/layout/Footer";
+import Header from "../components/layout/Header";
 
 const MainRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/greeting" element={<Greeting />} />
-      <Route path="/organization" element={<Organization />} />
-      <Route path="/future" element={<Future />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/certificate" element={<Certificate />} />
-      <Route path="/inspect" element={<Inspect />} />
-      <Route path="/product/:lock" element={<Product />} />
-      <Route path="/product/:lock/:id" element={<ProductDetail />} />
-      <Route path="/inquiry" element={<Inquiry />} />
-      <Route path="/board" element={<Board />} />
-      <Route path="/board/:id" element={<BoardDetail />} />
-    </Routes>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/intro" element={<Greeting />} />
+        <Route path="/organization" element={<Organization />} />
+        <Route path="/future" element={<Future />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/certificate" element={<Certificate />} />
+        <Route path="/inspect" element={<Inspect />} />
+        <Route path="/product/:lock" element={<Product />} />
+        <Route path="/product/:lock/:id" element={<ProductDetail />} />
+        <Route path="/inquiry" element={<Inquiry />} />
+        <Route path="/board" element={<Board />} />
+        <Route path="/board/:id" element={<BoardDetail />} />
+      </Routes>
+      <Footer />
+    </>
   );
 };
 

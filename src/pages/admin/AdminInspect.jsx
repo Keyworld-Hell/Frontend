@@ -11,7 +11,7 @@ const AdminInspect = () => {
   const [activeSubIndex, setActiveSubIndex] = useState(0);
 
   return (
-    <div className="flex">
+    <div className="admin-wrap flex">
       <AdminNav
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}

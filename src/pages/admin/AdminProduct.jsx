@@ -11,7 +11,7 @@ const AdminProduct = () => {
   const [activeIndex, setActiveIndex] = useState(3);
 
   return (
-    <div className="flex">
+    <div className="admin-wrap flex">
       <AdminNav
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}

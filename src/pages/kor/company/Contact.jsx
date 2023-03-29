@@ -57,9 +57,21 @@ const Contact = () => {
     <>
       <PageImage img={"company-img"} title="About Us" />
       <PageTitle title={"오시는 길"} />
-      <KakaoMap />
-      <div className="contact-address f-20 fw-600 m-0">
-        주소 : 인천 서구 가정로77번길 50-14
+      <div className="container m-0">
+        <div className="contact-address f-20 m-0 flex">
+
+            <li>
+              <b>주소 :</b> 인천 서구 가정로77번길 50-14
+            </li>
+            <li>
+              <b>대표 전화 :</b>010-0000-0000
+            </li>
+            <li>
+              <b>Email :</b> example@gmail.com
+            </li>
+
+        </div>
+        <KakaoMap />
       </div>
     </>
   );

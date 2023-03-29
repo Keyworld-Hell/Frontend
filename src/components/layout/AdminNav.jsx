@@ -19,7 +19,7 @@ const AdminNav = ({
   };
 
   return (
-    <div className="flex">
+    <div className="flex ">
       <nav className="admin-nav">
         <ul>
           {NAV_LIST.map((item, index) => (

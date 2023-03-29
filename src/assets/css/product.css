@@ -38,6 +38,8 @@
 }
 
 .product-nav ul li:hover {
+  font-size: 20px;
+  font-weight: 700;
   background-color: rgba(1, 1, 1, 0.6);
   transition: 0.15s ease-in-out;
 }

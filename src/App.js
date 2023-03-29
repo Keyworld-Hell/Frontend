@@ -24,17 +24,10 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <Routes>
-        <Route path="/*" element={<Header />} />
-        <Route path="/admin/*" element={<AdminHeader />} />
-      </Routes>
-      <Routes>
-        <Route path="/*" element={<MainRoutes />} />
-        <Route path="/admin/*" element={<AdminRoutes />} />
-      </Routes>
-      <Routes>
-        <Route path="/*" element={<Footer />} />
-      </Routes>
+        <Routes>
+          <Route path="/*" element={<MainRoutes />} />
+          <Route path="/admin/*" element={<AdminRoutes />} />
+        </Routes>
     </>
   );
 }

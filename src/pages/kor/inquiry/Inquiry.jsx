@@ -43,7 +43,6 @@ const Inquiry = () => {
             </div>
             <div className="inquiry-check f-18 fw-600">
               <input type="checkbox" id="check" />
-              <label for="check" />
               개인 정보 처리 방침에 동의합니다.
             </div>
           </div>
