@@ -76,7 +76,9 @@ header {
   height: 50px;
   cursor: pointer;
 }
-
+.header-menu-ul li div a{
+  width: 100%;
+}
 .header-menu-ul li div:hover {
   width: 170px;
   font-size: 20px;

@@ -8,7 +8,7 @@ import drawing from "../../../assets/img/drawing.png";
 
 import { PRODUCT_LIST } from "../../../store";
 
-const ProductDetail = () => {
+const ProductDetailEng = () => {
   const [isModal, setIsModal] = useState(false);
   const [isArrow, setIsarrow] = useState();
   const clickHandler = () => {
@@ -95,4 +95,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default ProductDetailEng;

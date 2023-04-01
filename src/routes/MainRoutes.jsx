@@ -16,7 +16,7 @@ import ProductDetail from "../pages/kor/product/ProductDetail";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 
-const MainRoutes = () => {
+const KorRoutes = () => {
   return (
     <>
       <Header />
@@ -39,4 +39,4 @@ const MainRoutes = () => {
   );
 };
 
-export default MainRoutes;
+export default KorRoutes;

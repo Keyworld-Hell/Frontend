@@ -17,15 +17,18 @@ import "./assets/css/product.css";
 import AdminHeader from "./components/layout/AdminHeader";
 import Footer from "./components/layout/Footer";
 import AdminRoutes from "./routes/AdminRoutes";
-import MainRoutes from "./routes/MainRoutes";
+
 import TopButton from "./components/layout/TopButton";
+import EngRoutes from "./routes/EngRoutes";
+import KorRoutes from "./routes/MainRoutes";
 
 function App() {
   return (
     <>
       <ScrollToTop />
-        <Routes>
-          <Route path="/*" element={<MainRoutes />} />
+      <Routes>
+          <Route path="/*" element={<KorRoutes/>}/>
+          <Route path="/eng/*" element={<EngRoutes/>}/>
           <Route path="/admin/*" element={<AdminRoutes />} />
         </Routes>
     </>
