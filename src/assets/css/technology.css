@@ -1,6 +1,8 @@
 .technology-img {
   width: 100%;
   height: 30vh;
+  min-height: 200px;
+  max-height: 400px;
   position: relative;
   background: url(../img/technology.png) no-repeat;
   background-position: center;
@@ -37,7 +39,6 @@
   border-radius: 10px;
   cursor: pointer;
   z-index: 1;
-  font-size: 18px;
 }
 
 .tech-imgs {
@@ -89,11 +90,12 @@
   .tech-img-text {
     width: 130px;
     height: 30px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 700;
   }
   .tech-text {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
@@ -122,11 +124,12 @@
   .tech-img-text {
     width: 130px;
     height: 30px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 700;
   }
   .tech-text {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
@@ -156,11 +159,13 @@
   .tech-img-text {
     width: 130px;
     height: 30px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 700;
   }
   .tech-text {
     font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
@@ -199,10 +204,12 @@
   .tech-img-text {
     width: 130px;
     height: 30px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 700;
   }
   .tech-text {
     font-size: 16px;
+    font-weight: 700;
   }
 }
 
@@ -241,10 +248,12 @@
   .tech-img-text {
     width: 130px;
     height: 30px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 700;
   }
   .tech-text {
     font-size: 16px;
+    font-weight: 700;
   }
 }
 
@@ -279,9 +288,11 @@
   .tech-img-text {
     width: 130px;
     height: 30px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 700;
   }
   .tech-text {
     font-size: 16px;
+    font-weight: 700;
   }
 }

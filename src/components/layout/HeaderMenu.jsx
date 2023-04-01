@@ -6,7 +6,7 @@ const HeaderMenu = ({ setIsHover }) => {
     <header className="header-menu flex color-white">
       <div className="flex header-container">
         <nav className="header-nav f-20 flex fw-600">
-          <ul className="header-menu-ul center">
+          <ul className="header-menu-ul center ">
             <li
               onMouseOver={() => setIsHover(true)}
               onMouseOut={() => setIsHover(false)}

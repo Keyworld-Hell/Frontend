@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import container from "../assets/img/container.jpeg";
 import product1 from "../assets/img/kiosk.jpg";
 import train from "../assets/img/train.jpeg";
 import auto from "../assets/img/auto.jpg";
 
 const Home = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const updateScroll = () => {
+    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", updateScroll);
+  }, []);
   return (
     <>
       <div className="color-background pt-70">

@@ -1,6 +1,8 @@
 .board-img {
   width: 100%;
   height: 30vh;
+    min-height: 200px;
+    max-height: 400px;
   position: relative;
   background: url(../img/cscenter.png) no-repeat;
   background-position: center;
@@ -54,8 +56,8 @@
 }
 .board-btn {
   float: right;
-  width: 133px;
-  height: 44px;
+  width: 120px;
+  height: 40px;
   background: #ff7f00;
   border: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -66,8 +68,8 @@
 
 .board-delete-btn {
   float: right;
-  width: 133px;
-  height: 44px;
+  width: 120px;
+  height: 40px;
   margin-right: 20px;
   background: #dd2727;
   border: 0;
@@ -224,8 +226,8 @@
 
   .board-btn {
     float: right;
-    width: 133px;
-    height: 44px;
+    width: 120px;
+    height: 40px;
     background: #ff7f00;
     border: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -236,8 +238,8 @@
 
   .board-delete-btn {
     float: right;
-    width: 133px;
-    height: 44px;
+    width: 120px;
+    height: 40px;
     margin-right: 20px;
     background: #dd2727;
     border: 0;

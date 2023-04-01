@@ -12,12 +12,12 @@ const Board = () => {
       <PageImage img={"board-img"} title="Board" />
       <PageTitle title={"게시판"} />
       <div className="container m-0">
-        <div className="board-subtitle flex f-24 fw-600">
+        <div className="board-subtitle flex f-20 fw-700">
           이 곳은 자유롭게 소통이 가능한 게시판입니다.
-          <button className="board-btn f-24 fw-600 color-white">글쓰기</button>
+          <button className="board-btn f-20 fw-700 color-white">글쓰기</button>
         </div>
         <div className="board-container m-0">
-          <div className="board-header flex f-24 fw-600 center">
+          <div className="board-header flex f-20 fw-700 center">
             <div className="board-id ">ID</div>
             <div className="board-name ">이름</div>
             <div className="board-title">제목</div>

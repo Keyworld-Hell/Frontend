@@ -18,17 +18,17 @@ const BoardDetail = () => {
       <PageImage img={"board-img"} title="Board" />
       <PageTitle title={"게시판"} />
       <div className="container m-0">
-        <div className="board-subtitle flex f-24 fw-600">
+        <div className="board-subtitle flex f-20 fw-700">
           이 곳은 자유롭게 소통이 가능한 게시판입니다.
           <div>
-            <button className="board-btn f-24 fw-600 color-white">수정</button>
-            <button className="board-delete-btn f-24 fw-600 color-white">
+            <button className="board-btn f-20 fw-700 color-white">수정</button>
+            <button className="board-delete-btn f-20 fw-700 color-white">
               삭제
             </button>
           </div>
         </div>
         <div className="board-container m-0">
-          <div className="board-header flex f-24 fw-600 center">
+          <div className="board-header flex f-20 fw-700 center">
             <div className="board-id  color-blue ">ID</div>
             <div className="board-name color-blue  ">이름</div>
             <div className="board-title color-blue ">제목</div>
@@ -46,7 +46,7 @@ const BoardDetail = () => {
               <div className="board-detail-content">{item.content}</div>
             </>
           ))}
-          <div className="board-comment-title flex f-24 fw-600 color-blue">
+          <div className="board-comment-title flex f-20 fw-700 color-blue">
             Comment
           </div>
           <div className="board-comment">
@@ -55,7 +55,7 @@ const BoardDetail = () => {
               KEYWORLD
               <div className="board-comment-date">2023.03.16</div>
             </div>
-            <div className="board-comment-content f-20 fw-600">
+            <div className="board-comment-content f-16">
               연락 드렸습니다.
             </div>
           </div>
@@ -73,7 +73,7 @@ const BoardDetail = () => {
               등록
             </button>
           </div>
-          <button className="board-list-btn flex color-white fw-600 f-20">
+          <button className="board-list-btn flex color-white fw-700 f-20">
             <a href={`/board`} className="color-white">
               목록
             </a>

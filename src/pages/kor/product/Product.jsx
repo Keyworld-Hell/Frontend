@@ -82,12 +82,12 @@ const Product = () => {
                   <b>표면 처리</b> 크롬 도금
                 </div>
                 <div className="product-feat flex">
-                  <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{" "}
+                  <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{" "}
                   통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경
                   설비
                 </div>
                 <div className="product-feat flex">
-                  <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{" "}
+                  <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{" "}
                   내구성 우수
                 </div>
               </div>
