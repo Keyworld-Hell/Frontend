@@ -94,11 +94,6 @@ header {
   height: 100%;
   animation: fadeOut 0.5s forwards;
 }
-footer {
-  min-width: 380px;
-  background-color: #000;
-  height: 200px;
-}
 @keyframes fadeIn {
   from {
     opacity: 0;

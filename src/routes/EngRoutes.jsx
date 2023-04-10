@@ -14,7 +14,7 @@ import InquiryEng from "../pages/eng/inquiry/InquiryEng";
 import BoardEng from "../pages/eng/board/BoardEng";
 import BoardDetailEng from "../pages/eng/board/BoardDetailEng";
 import HeaderEng from "../components/layout/HeaderEng";
-import Footer from "../components/layout/Footer";
+import FooterEng from "../components/layout/FooterEng";
 
 
 const EngRoutes = () => {
@@ -35,7 +35,7 @@ const EngRoutes = () => {
         <Route path="/board" element={<BoardEng />} />
         <Route path="/board/:id" element={<BoardDetailEng/>} />
       </Routes>
-      <Footer />
+      <FooterEng/>
     </>
   );
 };

@@ -16,9 +16,12 @@
 }
 
 .tech-img {
-  width: 480px;
-  height: 700px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  height: 500px;
   padding: 32px;
+  margin-bottom: 30px;
 }
 
 .tech-img-detail {
@@ -42,24 +45,26 @@
 }
 
 .tech-imgs {
-  width: 416px;
-  height: 588px;
+  max-width: 416px;
+  max-height: 588px;
   margin-bottom: 10px;
 }
 .tech-text {
 }
 
 .tech-inspect {
-  border-radius: 15px;
+  width: 416px;
+  height: 416px;
+  object-fit: contain;
 }
-.tech-img-detail:hover .tech-img-text {
+/* .tech-img-detail:hover .tech-img-text {
   visibility: visible;
   opacity: 1;
-}
+} */
 
-.tech-imgs:hover {
+/* .tech-imgs:hover {
   opacity: 0.7;
-}
+} */
 
 .tech-img-text:hover + img {
   opacity: 0.7;
@@ -79,11 +84,14 @@
     width: 30%;
     height: 100%;
     padding: 5px;
-    margin-bottom: 20px;
   }
   .tech-imgs {
     width: 100%;
-    height: 100%;
+
+    object-fit: contain;
+  }
+  .tech-inspect {
+    width: 100%;
     margin-bottom: 0px;
     object-fit: contain;
   }
@@ -113,14 +121,17 @@
     width: 30%;
     height: 100%;
     padding: 5px;
-    margin-bottom: 20px;
   }
   .tech-imgs {
     width: 100%;
     height: 100%;
-    margin-bottom: 0px;
     object-fit: contain;
   }
+  .tech-inspect {
+    width: 100%;
+    object-fit: contain;
+  }
+
   .tech-img-text {
     width: 130px;
     height: 30px;
@@ -148,12 +159,14 @@
     width: 33%;
     height: 100%;
     padding: 5px;
-    margin-bottom: 20px;
   }
   .tech-imgs {
     width: 100%;
     height: 100%;
-    margin-bottom: 0px;
+    object-fit: contain;
+  }
+  .tech-inspect {
+    width: 100%;
     object-fit: contain;
   }
   .tech-img-text {
@@ -193,12 +206,15 @@
     width: 33%;
     height: 100%;
     padding: 5px;
-    margin-bottom: 20px;
   }
   .tech-imgs {
     width: 100%;
     height: 100%;
-    margin-bottom: 0px;
+    object-fit: contain;
+  }
+  .tech-inspect {
+    width: 100%;
+        height: 300px;
     object-fit: contain;
   }
   .tech-img-text {
@@ -237,12 +253,16 @@
     width: 50%;
     height: 100%;
     padding: 5px;
-    margin-bottom: 20px;
+  }
+  .tech-inspect {
+    width: 100%;
+        height: 250px;
+    padding: 5px;
   }
   .tech-imgs {
     width: 100%;
     height: 100%;
-    margin-bottom: 0px;
+
     object-fit: contain;
   }
   .tech-img-text {
@@ -282,6 +302,12 @@
   .tech-imgs {
     width: 100%;
     height: 100%;
+    margin-bottom: 0px;
+    object-fit: contain;
+  }
+  .tech-inspect {
+    width: 100%;
+    height: 250px;
     margin-bottom: 0px;
     object-fit: contain;
   }
