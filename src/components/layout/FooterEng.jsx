@@ -23,9 +23,9 @@ const FooterEng = () => {
             <div>Emali : nnayomi@naver.com</div>
           </div>
         </div>
-        <div className="footerBottom">
-          Copyright ⓒ 2020 KEYWORLD Co., Ltd, All Rights Reserved
-        </div>
+      </div>
+      <div className="footerBottom">
+        Copyright ⓒ 2020 KEYWORLD Co., Ltd, All Rights Reserved
       </div>
     </div>
   );
