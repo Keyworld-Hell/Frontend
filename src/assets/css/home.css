@@ -16,6 +16,9 @@
 .home-products-list {
   justify-content: space-between;
 }
+  .home-product-text {
+    color: black;
+  }
 .home-bottom-img {
   width: 100%;
   justify-content: center;
