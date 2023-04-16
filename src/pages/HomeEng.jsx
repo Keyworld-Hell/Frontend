@@ -21,7 +21,8 @@ const HomeEng = () => {
         <div className="home-img center">
           <div className="home-text  color-blue">Quality & Trust</div>
           <div className="home-sub-text  color-white">
-            <span className="color-orange">키월드</span>의 도전은 계속됩니다
+            <span className="color-orange">Keyworld</span> continues to embrace
+            new challenges.
           </div>
         </div>
         <div className="home-product-container m-0">
@@ -29,39 +30,48 @@ const HomeEng = () => {
             our products
           </div>
           <div className="home-products-subtitle  f-20">
-            다양한 산업에서 키월드의 제품을 만나보세요
+            Discover Keyworld's products across various industries.
           </div>
           <div className="home-products-list flex">
             <div className="home-product">
               <img src={container} alt={container} />
               <div className="home-product-text ">
                 <div className="home-product-text-sub">보관함</div>
-                밀폐성 및 단열성을 최우선으로 하는 판넬도어에 견고한 부속품을
-                공급하여 강력한 밀페능력의 제품에 완성도를 높이고 있습니다.
+                We supply sturdy components to our panel doors, which prioritize
+                air-tightness and insulation, to enhance the overall product
+                integrity and strengthen its sealing capabilities.
               </div>
             </div>
             <div className="home-product">
               <img src={auto} alt={auto} />
               <div className="home-product-text ">
-                <div className="home-product-text-sub">자동화 기기</div>
-                밀폐성 및 단열성을 최우선으로 하는 판넬도어에 견고한 부속품을
-                공급하여 강력한 밀페능력의 제품에 완성도를 높이고 있습니다.
+                <div className="home-product-text-sub">
+                  Automation equipment
+                </div>
+                We are enhancing the integrity of our panel doors, which
+                prioritize air-tightness and insulation, by supplying robust
+                components that enable strong sealing capabilities.
               </div>
             </div>
             <div className="home-product">
               <img src={train} alt={train} />
               <div className="home-product-text ">
-                <div className="home-product-text-sub">기차 / 운송</div>
-                밀폐성 및 단열성을 최우선으로 하는 판넬도어에 견고한 부속품을
-                공급하여 강력한 밀페능력의 제품에 완성도를 높이고 있습니다.
+                <div className="home-product-text-sub">
+                  Train /Transportation{" "}
+                </div>
+                We supply sturdy components to our panel doors, which prioritize
+                air-tightness and insulation, to enhance the product's overall
+                sealing ability and completeness.
               </div>
             </div>
             <div className="home-product">
               <img src={product1} alt={product1} />
               <div className="home-product-text ">
-                <div className="home-product-text-sub">키오스크</div>
-                밀폐성 및 단열성을 최우선으로 하는 판넬도어에 견고한 부속품을
-                공급하여 강력한 밀페능력의 제품에 완성도를 높이고 있습니다.
+                <div className="home-product-text-sub">Kiosk</div>
+                We are increasing the completeness of our panel doors, which
+                prioritize air-tightness and insulation, by supplying sturdy
+                components that reinforce the product's strong sealing
+                capability.
               </div>
             </div>
           </div>
@@ -69,9 +79,11 @@ const HomeEng = () => {
         <div className="home-bottom-img flex">
           <div className="home-bottom flex">
             <div className="home-bottom-text m-0 color-white">
-              고객 만족도를 최선으로 하며 <br />
+              We strive for the highest level of customer satisfaction <br />
               <br />
-              끊임 없는 도전과 발전으로 고객님들 곁에 머무르겠습니다.
+              and will
+              continuously challenge ourselves to grow and remain by our
+              customers' side.
             </div>
           </div>
         </div>
