@@ -14,14 +14,14 @@ const ProductEng = () => {
   return (
     <>
       <PageImage img={"product-img"} title="Product" />
-      <PageTitle title={"제품소개"} />
+      <PageTitle title={"Product"} />
       <div className="container-only-product m-0 flex">
         <nav className="product-nav color-white f-18 fw-500">
           <ul>
             <li className="product-nav-title flex ">PRODUCT-LIST</li>
             {PRODUCT_LIST.map((item, index) => (
               <Link
-                to={`/product/${item.engName}`}
+                to={`/eng/product/${item.engName}`}
                 className="color-white"
                 key={index}
               >
@@ -40,7 +40,7 @@ const ProductEng = () => {
             <input className="f-20" placeholder="검색" />
             <button className="color-white f-20">search</button>
           </div>
-          <Link to={`/product/${params.lock}/1`} className="color-black">
+          <Link to={`/eng/product/${params.lock}/1`} className="color-black">
             <div className="product-box flex">
               <img className="product-content-img" src={img} alt={img} />
               <div className="product-sub">
@@ -82,13 +82,12 @@ const ProductEng = () => {
                   <b>표면 처리</b> 크롬 도금
                 </div>
                 <div className="product-feat flex">
-                  <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{" "}
-                  통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경
-                  설비
+                  <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b> 통신
+                  장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경 설비
                 </div>
                 <div className="product-feat flex">
-                  <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{" "}
-                  내구성 우수
+                  <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b> 내구성
+                  우수
                 </div>
               </div>
             </div>

@@ -56,7 +56,7 @@ const ContactEng = () => {
   return (
     <>
       <PageImage img={"company-img"} title="About Us" />
-      <PageTitle title={"오시는 길"} />
+      <PageTitle title={"Contact Us"} />
       <div className="container m-0">
         <div className="contact-address f-20 m-0 flex">
 

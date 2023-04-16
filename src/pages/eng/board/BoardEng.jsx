@@ -10,18 +10,18 @@ const BoardEng = () => {
   return (
     <>
       <PageImage img={"board-img"} title="Board" />
-      <PageTitle title={"게시판"} />
+      <PageTitle title={"Board"} />
       <div className="container m-0">
         <div className="board-subtitle flex f-20 fw-700">
-          이 곳은 자유롭게 소통이 가능한 게시판입니다.
-          <button className="board-btn f-20 fw-700 color-white">글쓰기</button>
+          This is a bulletin board where free communication is possible.
+          <button className="board-btn f-20 fw-700 color-white">Write</button>
         </div>
         <div className="board-container m-0">
           <div className="board-header flex f-20 fw-700 center">
             <div className="board-id ">ID</div>
-            <div className="board-name ">이름</div>
-            <div className="board-title">제목</div>
-            <div className="board-date ">날짜</div>
+            <div className="board-name ">Name</div>
+            <div className="board-title">Title</div>
+            <div className="board-date ">Date</div>
           </div>
           {DUMMY_BOARD.map((item, index) => (
             <Link to={`${item.id}`} key={index} className="color-black">

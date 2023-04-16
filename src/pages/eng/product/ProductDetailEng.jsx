@@ -19,7 +19,7 @@ const ProductDetailEng = () => {
   return (
     <>
       <PageImage img={"product-img"} title="Product" />
-      <PageTitle title={"제품소개"} />
+      <PageTitle title={"Product"+" > "+{}} />
       <div className="container-only-product m-0 flex">
         <div className="product-detail-container m-0">
           <button className="product-list-btn flex f-20 fw-700  color-white">

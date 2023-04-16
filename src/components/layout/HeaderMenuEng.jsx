@@ -53,22 +53,74 @@ const HeaderMenuEng = ({ setIsHover }) => {
             >
               <div>
                 <a href={`/eng/product/circularlock`} className={"color-white"}>
-                  원형 록
+                  Circular Lock
                 </a>
               </div>
-              <div>딤플 록</div>
-              <div>디스크 록</div>
-              <div>스위치 록</div>
-              <div>캠 록</div>
-              <div>사우나 록</div>
-              <div>스틸 록</div>
-              <div>디지털 록</div>
-              <div>경첩</div>
-              <div>핸들</div>
-              <div>스페셜 록</div>
-              <div>기타</div>
-              <div>주문제작</div>
-              <div>개발</div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Dimple Lock
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Disc Lock
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Switch Lock
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Cam Lock
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Sauna Lock
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Steel Lock
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Digital Lock
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Hinge
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Handle
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Special
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Etc
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  Custom Lock
+                </a>
+              </div>
+              <div>
+                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                  N-part
+                </a>
+              </div>
             </li>
             <li></li>
             <li></li>
