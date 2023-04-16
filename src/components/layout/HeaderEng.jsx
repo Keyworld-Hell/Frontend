@@ -13,7 +13,7 @@ const HeaderEng = () => {
       <header className="flex">
         <div className="flex header-container">
           <div className="header-logo">
-            <a href="/eng/">
+            <a href="/eng">
               <img src={logo} alt={logo} />
             </a>
           </div>

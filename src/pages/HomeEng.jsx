@@ -34,45 +34,54 @@ const HomeEng = () => {
           </div>
           <div className="home-products-list flex">
             <div className="home-product">
-              <img src={container} alt={container} />
-              <div className="home-product-text ">
-                <div className="home-product-text-sub">보관함</div>
-                We supply sturdy components to our panel doors, which prioritize
-                air-tightness and insulation, to enhance the overall product
-                integrity and strengthen its sealing capabilities.
-              </div>
-            </div>
-            <div className="home-product">
-              <img src={auto} alt={auto} />
-              <div className="home-product-text ">
-                <div className="home-product-text-sub">
-                  Automation equipment
+              <a href={`eng/product/circularlock`} className={"color-white"}>
+                <img src={container} alt={container} />
+                <div className="home-product-text ">
+                  <div className="home-product-text-sub">Container</div>
+                  We supply sturdy components to our panel doors, which
+                  prioritize air-tightness and insulation, to enhance the
+                  overall product integrity and strengthen its sealing
+                  capabilities.
                 </div>
-                We are enhancing the integrity of our panel doors, which
-                prioritize air-tightness and insulation, by supplying robust
-                components that enable strong sealing capabilities.
-              </div>
+              </a>
             </div>
             <div className="home-product">
-              <img src={train} alt={train} />
-              <div className="home-product-text ">
-                <div className="home-product-text-sub">
-                  Train /Transportation{" "}
+              <a href={`eng/product/circularlock`} className={"color-white"}>
+                <img src={auto} alt={auto} />
+                <div className="home-product-text ">
+                  <div className="home-product-text-sub">
+                    Automation equipment
+                  </div>
+                  We are enhancing the integrity of our panel doors, which
+                  prioritize air-tightness and insulation, by supplying robust
+                  components that enable strong sealing capabilities.
                 </div>
-                We supply sturdy components to our panel doors, which prioritize
-                air-tightness and insulation, to enhance the product's overall
-                sealing ability and completeness.
-              </div>
+              </a>
             </div>
             <div className="home-product">
-              <img src={product1} alt={product1} />
-              <div className="home-product-text ">
-                <div className="home-product-text-sub">Kiosk</div>
-                We are increasing the completeness of our panel doors, which
-                prioritize air-tightness and insulation, by supplying sturdy
-                components that reinforce the product's strong sealing
-                capability.
-              </div>
+              <a href={`eng/product/circularlock`} className={"color-white"}>
+                <img src={train} alt={train} />
+                <div className="home-product-text ">
+                  <div className="home-product-text-sub">
+                    Train /Transportation{" "}
+                  </div>
+                  We supply sturdy components to our panel doors, which
+                  prioritize air-tightness and insulation, to enhance the
+                  product's overall sealing ability and completeness.
+                </div>
+              </a>
+            </div>
+            <div className="home-product">
+              <a href={`eng/product/circularlock`} className={"color-white"}>
+                <img src={product1} alt={product1} />
+                <div className="home-product-text ">
+                  <div className="home-product-text-sub">Kiosk</div>
+                  We are increasing the completeness of our panel doors, which
+                  prioritize air-tightness and insulation, by supplying sturdy
+                  components that reinforce the product's strong sealing
+                  capability.
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -81,9 +90,8 @@ const HomeEng = () => {
             <div className="home-bottom-text m-0 color-white">
               We strive for the highest level of customer satisfaction <br />
               <br />
-              and will
-              continuously challenge ourselves to grow and remain by our
-              customers' side.
+              and will continuously challenge ourselves to grow and remain by
+              our customers' side.
             </div>
           </div>
         </div>
