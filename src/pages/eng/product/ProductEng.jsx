@@ -49,18 +49,18 @@ const ProductEng = () => {
                 </div>
                 <div className="product-content flex">
                   <div className="product-feat flex">
-                    <b>주요 재질</b> 아연 합금
+                    <b>Materials</b> 아연 합금
                   </div>
                   <div className="product-feat flex">
-                    <b>표면 처리</b> 크롬 도금
+                    <b>Surface</b> 크롬 도금
                   </div>
                   <div className="product-feat flex">
-                    <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{" "}
+                    <b>Use</b>{" "}
                     통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경
                     설비
                   </div>
                   <div className="product-feat flex">
-                    <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{" "}
+                    <b>Features</b>{" "}
                     내구성 우수
                   </div>
                 </div>

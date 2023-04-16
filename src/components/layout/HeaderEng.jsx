@@ -27,7 +27,7 @@ const HeaderEng = () => {
                   Company
                 </li>
               </a>
-              <a href="/certificate" className={"color-black"}>
+              <a href="/eng/certificate" className={"color-black"}>
                 <li
                   onMouseOut={() => setIsHover(false)}
                   onMouseOver={() => setIsHover(true)}
@@ -35,12 +35,14 @@ const HeaderEng = () => {
                   Technology
                 </li>
               </a>
-              <li
-                onMouseOut={() => setIsHover(false)}
-                onMouseOver={() => setIsHover(true)}
-              >
-                Product
-              </li>
+              <a href="/eng/product/circularlock">
+                <li
+                  onMouseOut={() => setIsHover(false)}
+                  onMouseOver={() => setIsHover(true)}
+                >
+                  Product
+                </li>
+              </a>
               <a href="/eng/inquiry" className="color-black">
                 <li>Inquiry</li>
               </a>

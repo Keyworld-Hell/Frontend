@@ -34,7 +34,7 @@ const HomeEng = () => {
           </div>
           <div className="home-products-list flex">
             <div className="home-product">
-              <a href={`eng/product/circularlock`} className={"color-white"}>
+              <a href={`/eng/product/circularlock`} className={"color-white"}>
                 <img src={container} alt={container} />
                 <div className="home-product-text ">
                   <div className="home-product-text-sub">Container</div>
@@ -46,7 +46,7 @@ const HomeEng = () => {
               </a>
             </div>
             <div className="home-product">
-              <a href={`eng/product/circularlock`} className={"color-white"}>
+              <a href={`/eng/product/circularlock`} className={"color-white"}>
                 <img src={auto} alt={auto} />
                 <div className="home-product-text ">
                   <div className="home-product-text-sub">
@@ -59,7 +59,7 @@ const HomeEng = () => {
               </a>
             </div>
             <div className="home-product">
-              <a href={`eng/product/circularlock`} className={"color-white"}>
+              <a href={`/eng/product/circularlock`} className={"color-white"}>
                 <img src={train} alt={train} />
                 <div className="home-product-text ">
                   <div className="home-product-text-sub">
@@ -72,7 +72,7 @@ const HomeEng = () => {
               </a>
             </div>
             <div className="home-product">
-              <a href={`eng/product/circularlock`} className={"color-white"}>
+              <a href={`/eng/product/circularlock`} className={"color-white"}>
                 <img src={product1} alt={product1} />
                 <div className="home-product-text ">
                   <div className="home-product-text-sub">Kiosk</div>
