@@ -35,7 +35,7 @@ const HeaderEng = () => {
                   Technology
                 </li>
               </a>
-              <a href="/eng/product/circularlock">
+              <a href="/eng/product/circularlock" className="color-black">
                 <li
                   onMouseOut={() => setIsHover(false)}
                   onMouseOver={() => setIsHover(true)}
