@@ -25,12 +25,12 @@ import KorRoutes from "./routes/MainRoutes";
 function App() {
   return (
     <>
-      <ScrollToTop />
       <Routes>
           <Route path="/*" element={<KorRoutes/>}/>
           <Route path="/eng/*" element={<EngRoutes/>}/>
-          <Route path="/admin/*" element={<AdminRoutes />} />
-        </Routes>
+        <Route path="/admin/*" element={<AdminRoutes />} />
+      </Routes>
+        <TopButton/>
     </>
   );
 }

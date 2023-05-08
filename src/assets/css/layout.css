@@ -94,6 +94,29 @@ header {
   height: 100%;
   animation: fadeOut 0.5s forwards;
 }
+.scroll__container {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+}
+#top {
+  width: 60px;
+  height: 60px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 15px 10px;
+  background-color: #244497;
+  color: #fff;
+  border: 2px solid #244497;
+
+  outline: none;
+  cursor: pointer;
+}
+#top:hover {
+  background: aliceblue;
+  color: #244497;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -68,7 +68,7 @@ const Product = () => {
             </div>
           </Link>
 
-          <div className="product-box flex">
+          {/* <div className="product-box flex">
             <img className="product-content-img" src={img} alt={img} />
             <div className="product-sub">
               <div className="product-title flex f-20 fw-600 color-white flex">
@@ -167,7 +167,7 @@ const Product = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="product-pagination center">pagination</div>
         </div>
       </div>
