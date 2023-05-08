@@ -125,6 +125,7 @@
 .product-feat {
   height: 36px;
   font-size: 18px;
+      align-items: center;
   color: #777777;
 }
 .product-feat b {

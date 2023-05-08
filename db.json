@@ -184,5 +184,61 @@
       "title": "아아아아앙 아아아아아아 아아아앙 아아아앙 아아아앙 아아앙 아아아아아 아아아아 아ㅏ아아 아아아아아아아아앙",
       "created_date": "2023.4.29"
     }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhvVV5So5tTBx_euxzKvc4DJWzXk9cncd2oZisgVIZ&s",
+      "title": "WD-201",
+      "texture": "아연 합금",
+      "surface": "크롬 도금",
+      "use": "통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경설비",
+      "feature": "내구성 우수"
+    },
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhvVV5So5tTBx_euxzKvc4DJWzXk9cncd2oZisgVIZ&s",
+      "title": "WD-201",
+      "texture": "아연 합금",
+      "surface": "크롬 도금",
+      "use": "통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경설비",
+      "feature": "내구성 우수"
+    },
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhvVV5So5tTBx_euxzKvc4DJWzXk9cncd2oZisgVIZ&s",
+      "title": "WD-201",
+      "texture": "아연 합금",
+      "surface": "크롬 도금",
+      "use": "통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경설비",
+      "feature": "내구성 우수"
+    },
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhvVV5So5tTBx_euxzKvc4DJWzXk9cncd2oZisgVIZ&s",
+      "title": "WD-201",
+      "texture": "아연 합금",
+      "surface": "크롬 도금",
+      "use": "통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경설비",
+      "feature": "내구성 우수"
+    },
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhvVV5So5tTBx_euxzKvc4DJWzXk9cncd2oZisgVIZ&s",
+      "title": "WD-201",
+      "texture": "아연 합금",
+      "surface": "크롬 도금",
+      "use": "통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경설비",
+      "feature": "내구성 우수"
+    },
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhvVV5So5tTBx_euxzKvc4DJWzXk9cncd2oZisgVIZ&s",
+      "title": "WD-201",
+      "texture": "아연 합금",
+      "surface": "크롬 도금",
+      "use": "통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경설비",
+      "feature": "내구성 우수"
+    }
   ]
 }

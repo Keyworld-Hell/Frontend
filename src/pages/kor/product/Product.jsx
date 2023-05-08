@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 
@@ -10,6 +12,18 @@ import { PRODUCT_LIST } from "../../../store";
 
 const Product = () => {
   const params = useParams();
+  const[PRODUCT_KEY, setPRODUCT_KEY] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/product")
+      .then((response) => {
+        setPRODUCT_KEY(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <>
@@ -40,134 +54,34 @@ const Product = () => {
             <input className="f-20" placeholder="검색" />
             <button className="color-white f-20">search</button>
           </div>
-          <Link to={`/product/${params.lock}/1`} className="color-black">
+          {PRODUCT_KEY.map((item, index) => (
+          <Link to={`/product/${params.lock}/${index}`} className="color-black">
             <div className="product-box flex">
-              <img className="product-content-img" src={img} alt={img} />
+              <img className="product-content-img" src={item.img} alt={img} />
               <div className="product-sub">
                 <div className="product-title flex f-20 fw-600 color-white flex">
-                  WD-401
+                  WD-401{item.title}
                 </div>
                 <div className="product-content flex">
                   <div className="product-feat flex">
-                    <b>주요 재질</b> 아연 합금
+                    <b>주요 재질</b> 아연 합금{item.texture}
                   </div>
                   <div className="product-feat flex">
-                    <b>표면 처리</b> 크롬 도금
+                    <b>표면 처리</b> 크롬 도금{item.surface}
                   </div>
                   <div className="product-feat flex">
-                    <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{" "}
+                    <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{item.use}
                     통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경
                     설비
                   </div>
                   <div className="product-feat flex">
-                    <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{" "}
+                    <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{item.feature}
                     내구성 우수
                   </div>
                 </div>
               </div>
             </div>
-          </Link>
-
-          {/* <div className="product-box flex">
-            <img className="product-content-img" src={img} alt={img} />
-            <div className="product-sub">
-              <div className="product-title flex f-20 fw-600 color-white flex">
-                WD-401
-              </div>
-              <div className="product-content flex">
-                <div className="product-feat flex">
-                  <b>주요 재질</b> 아연 합금
-                </div>
-                <div className="product-feat flex">
-                  <b>표면 처리</b> 크롬 도금
-                </div>
-                <div className="product-feat flex">
-                  <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{" "}
-                  통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경
-                  설비
-                </div>
-                <div className="product-feat flex">
-                  <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{" "}
-                  내구성 우수
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="product-box flex">
-            <img className="product-content-img" src={img} alt={img} />
-            <div className="product-sub">
-              <div className="product-title flex f-20 fw-600 color-white flex">
-                WD-401
-              </div>
-              <div className="product-content flex">
-                <div className="product-feat flex">
-                  <b>주요 재질</b> 아연 합금
-                </div>
-                <div className="product-feat flex">
-                  <b>표면 처리</b> 크롬 도금
-                </div>
-                <div className="product-feat flex">
-                  <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{" "}
-                  통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경
-                  설비
-                </div>
-                <div className="product-feat flex">
-                  <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{" "}
-                  내구성 우수
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="product-box flex">
-            <img className="product-content-img" src={img} alt={img} />
-            <div className="product-sub">
-              <div className="product-title flex f-20 fw-600 color-white flex">
-                WD-401
-              </div>
-              <div className="product-content flex">
-                <div className="product-feat flex">
-                  <b>주요 재질</b> 아연 합금
-                </div>
-                <div className="product-feat flex">
-                  <b>표면 처리</b> 크롬 도금
-                </div>
-                <div className="product-feat flex">
-                  <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{" "}
-                  통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경
-                  설비
-                </div>
-                <div className="product-feat flex">
-                  <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{" "}
-                  내구성 우수
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="product-box flex">
-            <img className="product-content-img" src={img} alt={img} />
-            <div className="product-sub">
-              <div className="product-title flex f-20 fw-600 color-white flex">
-                WD-401
-              </div>
-              <div className="product-content flex">
-                <div className="product-feat flex">
-                  <b>주요 재질</b> 아연 합금
-                </div>
-                <div className="product-feat flex">
-                  <b>표면 처리</b> 크롬 도금
-                </div>
-                <div className="product-feat flex">
-                  <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{" "}
-                  통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경
-                  설비
-                </div>
-                <div className="product-feat flex">
-                  <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{" "}
-                  내구성 우수
-                </div>
-              </div>
-            </div>
-          </div> */}
+          </Link>))}
           <div className="product-pagination center">pagination</div>
         </div>
       </div>
