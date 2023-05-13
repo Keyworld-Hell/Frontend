@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 import { INQUIRY_LIST } from "../../store/nav";
 
+import axios from "axios";
+
+const SERVER_URL = "http://localhost:3000";
+
 const AdminInquiryDetail = () => {
   const params = useParams();
+
+  const [inquiryDetail, setInquiryDetal] = useState({});
+
   const inquiry = INQUIRY_LIST.filter(
     (item) => item.id === Number(params.id)
   )[0];
+
+  const fetchInquiry = async () => {
+    await axios
+      .get(`${SERVER_URL}/inquiry/${params.id}`)
+      .then((res) => setInquiryDetal(res.data))
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    fetchInquiry();
+  }, [inquiryDetail]);
 
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(4);
@@ -27,6 +45,9 @@ const AdminInquiryDetail = () => {
               <button className="admin-upload-btn  color-white">목록</button>
             </Link>
           </div>
+          {/**
+           * !TODO: inquiry를 inquiryDetail로 수정
+           */}
           <div className="inquiry-container m-0">
             <div className="inquiry-input">
               <div className="inquiry-subtitle f-20 fw-700">상호명</div>
