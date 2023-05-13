@@ -1,14 +1,29 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AdminNav from "../../components/layout/AdminNav";
 
-import img from "../../assets/img/inspect.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
+import axios from "axios";
+
+const SERVER_URL = "http://localhost:3000";
 
 const AdminProduct = () => {
-  const fileRef = useRef();
+  const params = useParams();
 
   const [activeSubIndex, setActiveSubIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(3);
+  const [productList, setProductList] = useState([]);
+
+  const fetchProduct = async () => {
+    await axios
+      .get(`${SERVER_URL}/0/products/${params.lock}`)
+      .then((res) => setProductList(res.data))
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    fetchProduct();
+  }, [productList]);
 
   return (
     <div className="flex">
