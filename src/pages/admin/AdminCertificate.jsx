@@ -1,14 +1,27 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import AdminNav from "../../components/layout/AdminNav";
 
 import img from "../../assets/img/inspect.png";
 import { Link } from "react-router-dom";
 
-const AdminCertificate = () => {
-  const fileRef = useRef();
+import axios from "axios";
 
+const SERVER_URL = "http://localhost:3000";
+
+const AdminCertificate = () => {
   const [activeSubIndex, setActiveSubIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(1);
+  const [certificationList, setCertificationList] = useState([]);
+
+  const fetchCertificate = async () => {
+    await axios.get(`${SERVER_URL}/0/certification`).then((res) => {
+      setCertificationList(res.data);
+    });
+  };
+
+  useEffect(() => {
+    fetchCertificate();
+  }, [certificationList]);
 
   return (
     <div className="flex">
@@ -24,7 +37,7 @@ const AdminCertificate = () => {
             <input className="admin-search-input f-20" placeholder="검색" />
             <button className="admin-search-btn color-white">search</button>
           </div>
-          <Link to={`/admin/certificate/upload`} className="color-white flex">
+          <Link to={`/admin/certification/upload`} className="color-white flex">
             <button className="admin-upload-btn  color-white">등록</button>
           </Link>
         </div>
@@ -38,69 +51,20 @@ const AdminCertificate = () => {
               <button className="admin-tech-btn color-white">X</button>
             </div>
           </div>
-          <div className="admin-tech-contents flex">
-            <div className="admin-tech-box">
-              <div className="admin-tech-img">
-                <img src={img} alt={img} />
+
+          {certificationList.map((item) => (
+            <div className="admin-tech-contents flex">
+              <div className="admin-tech-box">
+                <div className="admin-tech-img">
+                  <img src={item.img} alt={item.img} />
+                </div>
+                <div className="admin-tech-name flex f-20 fw-700">
+                  {item.name}
+                </div>
+                <button className="admin-tech-btn color-white">X</button>
               </div>
-              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
-              <button className="admin-tech-btn color-white">X</button>
             </div>
-          </div>
-          <div className="admin-tech-contents flex">
-            <div className="admin-tech-box">
-              <div className="admin-tech-img">
-                <img src={img} alt={img} />
-              </div>
-              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
-              <button className="admin-tech-btn color-white">X</button>
-            </div>
-          </div>
-          <div className="admin-tech-contents flex">
-            <div className="admin-tech-box">
-              <div className="admin-tech-img">
-                <img src={img} alt={img} />
-              </div>
-              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
-              <button className="admin-tech-btn color-white">X</button>
-            </div>
-          </div>
-          <div className="admin-tech-contents flex">
-            <div className="admin-tech-box">
-              <div className="admin-tech-img">
-                <img src={img} alt={img} />
-              </div>
-              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
-              <button className="admin-tech-btn color-white">X</button>
-            </div>
-          </div>
-          <div className="admin-tech-contents flex">
-            <div className="admin-tech-box">
-              <div className="admin-tech-img">
-                <img src={img} alt={img} />
-              </div>
-              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
-              <button className="admin-tech-btn color-white">X</button>
-            </div>
-          </div>
-          <div className="admin-tech-contents flex">
-            <div className="admin-tech-box">
-              <div className="admin-tech-img">
-                <img src={img} alt={img} />
-              </div>
-              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
-              <button className="admin-tech-btn color-white">X</button>
-            </div>
-          </div>
-          <div className="admin-tech-contents flex">
-            <div className="admin-tech-box">
-              <div className="admin-tech-img">
-                <img src={img} alt={img} />
-              </div>
-              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
-              <button className="admin-tech-btn color-white">X</button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
