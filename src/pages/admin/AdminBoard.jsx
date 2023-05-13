@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 import { DUMMY_BOARD } from "../../store/nav";
 
+import axios from "axios";
+
+const SERVER_URL = "http://localhost:3000";
+
 const AdminBoard = () => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(5);
+
+  const [boardList, setBoardList] = useState([]);
+
+  const fetchBoard = async () => {
+    await axios.get(`${SERVER_URL}/board`).then((res) => {
+      setBoardList(res.data);
+    });
+  };
+
+  useEffect(() => {
+    fetchBoard();
+  }, [boardList]);
 
   return (
     <div className="flex">
@@ -24,6 +40,9 @@ const AdminBoard = () => {
             <div className="admin-board-date ">날짜</div>
             <div className="admin-board-delete"></div>
           </div>
+          {/*
+          !FEAT: DUMMY_BOARD를 boardList로 수정
+           */}
           {DUMMY_BOARD.map((item, index) => (
             <Link to={`${item.id}`} key={index} className="color-black">
               <div className="board-content f-18 flex center">
