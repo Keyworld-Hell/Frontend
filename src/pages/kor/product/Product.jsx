@@ -55,7 +55,7 @@ const Product = () => {
             <button className="color-white f-20">search</button>
           </div>
           {PRODUCT_KEY.map((item, index) => (
-          <Link to={`/product/${params.lock}/${index}`} className="color-black">
+          <Link to={`/product/${params.lock}/${item.id}`} className="color-black">
             <div className="product-box flex">
               <img className="product-content-img" src={item.img} alt={img} />
               <div className="product-sub">

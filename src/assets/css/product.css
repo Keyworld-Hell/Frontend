@@ -123,9 +123,9 @@
 }
 
 .product-feat {
-  height: 36px;
+  height: 40px;
   font-size: 18px;
-      align-items: center;
+  align-items: center;
   color: #777777;
 }
 .product-feat b {
@@ -664,8 +664,9 @@
     justify-content: center;
   }
   .product-feat {
-    height: 36px;
-    align-items: center;
+    height: auto;
+    align-items: baseline;
+
     font-size: 14px;
     color: #777777;
   }
@@ -1114,6 +1115,9 @@
   }
   .product-feat {
     font-size: 12px;
+    height: auto;
+    align-items: baseline;
+    overflow: hidden;
     color: #777777;
   }
   .product-feat b {
