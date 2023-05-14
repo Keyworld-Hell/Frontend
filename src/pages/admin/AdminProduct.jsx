@@ -47,15 +47,17 @@ const AdminProduct = () => {
         </div>
         <div className="admin-product-list-container flex m-0">
           {productList.map((item) => (
-          <div className="each-product flex">
-            <div className="each-product-delete flex">
-              <button>Delete</button>
-            </div>
-            <div className="admin-product-img flex">
-              <img src={key} alt="key" />
-            </div>
-            <div className="admin-product-name flex">WD-901 {}</div>
-          </div>
+            <Link >
+              <div className="each-product flex">
+                <div className="each-product-delete flex">
+                  <button>Delete</button>
+                </div>
+                <div className="admin-product-img flex">
+                  <img src={key} alt="key" />
+                </div>
+                <div className="admin-product-name flex">WD-901 {}</div>
+              </div>
+            </Link>
           ))}
 
           <div className="each-product flex">
@@ -131,7 +133,70 @@ const AdminProduct = () => {
             </div>
             <div className="admin-product-name flex">WD-901 {}</div>
           </div>
-          
+          <div className="each-product flex">
+            <div className="each-product-delete flex">
+              <button>Delete</button>
+            </div>
+            <div className="admin-product-img flex">
+              <img src={key} alt="key" />
+            </div>
+            <div className="admin-product-name flex">WD-901 {}</div>
+          </div>
+          <div className="each-product flex">
+            <div className="each-product-delete flex">
+              <button>Delete</button>
+            </div>
+            <div className="admin-product-img flex">
+              <img src={key} alt="key" />
+            </div>
+            <div className="admin-product-name flex">WD-901 {}</div>
+          </div>
+          <div className="each-product flex">
+            <div className="each-product-delete flex">
+              <button>Delete</button>
+            </div>
+            <div className="admin-product-img flex">
+              <img src={key} alt="key" />
+            </div>
+            <div className="admin-product-name flex">WD-901 {}</div>
+          </div>
+          <div className="each-product flex">
+            <div className="each-product-delete flex">
+              <button>Delete</button>
+            </div>
+            <div className="admin-product-img flex">
+              <img src={key} alt="key" />
+            </div>
+            <div className="admin-product-name flex">WD-901 {}</div>
+          </div>
+          <div className="each-product flex">
+            <div className="each-product-delete flex">
+              <button>Delete</button>
+            </div>
+            <div className="admin-product-img flex">
+              <img src={key} alt="key" />
+            </div>
+            <div className="admin-product-name flex">WD-901 {}</div>
+          </div>
+
+          <div className="each-product flex">
+            <div className="each-product-delete flex">
+              <button>Delete</button>
+            </div>
+            <div className="admin-product-img flex">
+              <img src={key} alt="key" />
+            </div>
+            <div className="admin-product-name flex">WD-901 {}</div>
+          </div>
+          <div className="each-product flex">
+            <div className="each-product-delete flex">
+              <button>Delete</button>
+            </div>
+            <div className="admin-product-img flex">
+              <img src={key} alt="key" />
+            </div>
+            <div className="admin-product-name flex">WD-901 {}</div>
+          </div>
         </div>
       </div>
     </div>

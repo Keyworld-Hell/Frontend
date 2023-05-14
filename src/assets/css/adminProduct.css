@@ -2,21 +2,21 @@
   width: 1400px;
   overflow-y: scroll;
   height: calc(100vh - 70px);
-  padding: 0px 20px 0px 20px;
+  padding: 0px 0px 0px 20px;
 }
 
 .admin-product-container::-webkit-scrollbar {
   display: none;
 }
 .admin-product-list-container {
-  min-width: 1024px;
+    min-width: 1024px;
   padding-top: 20px;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+
 }
 .each-product {
-  margin-left: 10px;
+  margin: 10px;
   margin-bottom: 20px;
   border-radius: 2%;
   flex-direction: column;
