@@ -1,0 +1,65 @@
+.admin-product-container {
+  width: 1400px;
+  overflow-y: scroll;
+  height: calc(100vh - 70px);
+  padding: 0px 20px 0px 20px;
+}
+
+.admin-product-container::-webkit-scrollbar {
+  display: none;
+}
+.admin-product-list-container {
+  min-width: 1024px;
+  padding-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.each-product {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 2%;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 320px;
+  height: 320px;
+  border: 2px solid #5555;
+}
+.each-product:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: 0.4s ease-in-out;
+  background-color: #555;
+  color: #fff;
+}
+.each-product-delete {
+  justify-content: flex-end;
+}
+.each-product-delete button {
+  width: 80px;
+  height: 30px;
+  color: #fff;
+  font-size: 16px;
+  background: #dd2727;
+  border-radius: 5px;
+}
+
+.admin-product-img {
+  width: 320px;
+  padding-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.admin-product-img img {
+  width: 300px;
+  object-fit: contain;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25));
+}
+.admin-product-name {
+  height: 60px;
+  padding-left: 10px;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+}

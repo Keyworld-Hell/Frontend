@@ -21,15 +21,22 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/*" element={<Header />} />
         <Route path="/admin/*" element={<AdminHeader />} />
       </Routes>
       <Routes>
-        <Route path="/*" element={<MainRoutes />} />
         <Route path="/admin/*" element={<AdminRoutes />} />
       </Routes>
       <Routes>
-        <Route path="/*" element={<Footer />} />
+        <Route path="/admin" element={<></>} />
+      </Routes>
+      <Routes>
+        <Route path="/" element={<Header />} />
+      </Routes>
+      <Routes>
+        <Route path="/" element={<MainRoutes />} />
+      </Routes>
+      <Routes>
+        <Route path="/" element={<Footer />} />
       </Routes>
     </>
   );
