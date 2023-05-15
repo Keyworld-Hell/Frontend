@@ -13,12 +13,11 @@ import Board from "../pages/kor/board/Board";
 import BoardDetail from "../pages/kor/board/BoardDetail";
 import Product from "../pages/kor/product/Product";
 import ProductDetail from "../pages/kor/product/ProductDetail";
-import Footer from "../components/layout/Footer";
 
 const MainRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/" element={<Home />} />
       <Route path="/greeting" element={<Greeting />} />
       <Route path="/organization" element={<Organization />} />
       <Route path="/future" element={<Future />} />

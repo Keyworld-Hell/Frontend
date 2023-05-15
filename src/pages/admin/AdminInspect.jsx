@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import AdminNav from "../../components/layout/AdminNav";
 
 import img from "../../assets/img/inspect.png";
@@ -9,8 +9,6 @@ import axios from "axios";
 const SERVER_URL = "http://localhost:3000";
 
 const AdminInspect = () => {
-  const fileRef = useRef();
-
   const [activeIndex, setActiveIndex] = useState(2);
   const [activeSubIndex, setActiveSubIndex] = useState(0);
 

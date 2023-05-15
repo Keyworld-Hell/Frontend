@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import AdminNav from "../../components/layout/AdminNav";
 import "../../assets/css/adminProduct.css";
 import key from "../../assets/img/key.png";
@@ -47,7 +47,7 @@ const AdminProduct = () => {
         </div>
         <div className="admin-product-list-container flex m-0">
           {productList.map((item) => (
-            <Link >
+            <Link>
               <div className="each-product flex">
                 <div className="each-product-delete flex">
                   <button>Delete</button>
