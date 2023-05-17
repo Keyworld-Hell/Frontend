@@ -17,6 +17,7 @@ import AdminHeader from "./components/layout/AdminHeader";
 import Footer from "./components/layout/Footer";
 import AdminRoutes from "./routes/AdminRoutes";
 import MainRoutes from "./routes/MainRoutes";
+import AdminLogin from "./pages/admin/AdminLogin";
 
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(true);
@@ -29,6 +30,7 @@ function App() {
         />
       </Routes>
       <Routes>
+        <Route path="/admin" element={<AdminLogin />} />
         <Route
           path="/admin/*"
           element={<AdminRoutes isNavOpen={isNavOpen} />}
