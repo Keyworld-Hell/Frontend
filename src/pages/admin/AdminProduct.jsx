@@ -9,7 +9,7 @@ import axios from "axios";
 
 const SERVER_URL = "http://localhost:3000";
 
-const AdminProduct = () => {
+const AdminProduct = ({ isNavOpen }) => {
   const params = useParams();
 
   const [activeSubIndex, setActiveSubIndex] = useState(0);
@@ -34,6 +34,7 @@ const AdminProduct = () => {
         setActiveIndex={setActiveIndex}
         activeSubIndex={activeSubIndex}
         setActiveSubIndex={setActiveSubIndex}
+        isNavOpen={isNavOpen}
       />
       <div className="admin-product-container container m-0">
         <div className="admin-title admin-no-title flex f-20 fw-600">

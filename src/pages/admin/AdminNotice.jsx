@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const SERVER_URL = "http://localhost:3000";
 
-const AdminNotice = () => {
+const AdminNotice = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -30,6 +30,7 @@ const AdminNotice = () => {
         setActiveIndex={setActiveIndex}
         activeSubIndex={activeSubIndex}
         setActiveSubIndex={setActiveSubIndex}
+        isNavOpen={isNavOpen}
       />
       <div className="admin-container container m-0">
         <div className="admin-title admin-no-title flex f-20 fw-600">

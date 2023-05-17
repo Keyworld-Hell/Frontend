@@ -7,7 +7,7 @@ import axios from "axios";
 
 const SERVER_URL = "http://localhost:3000";
 
-const AdminInquiryDetail = () => {
+const AdminInquiryDetail = ({ isNavOpen }) => {
   const params = useParams();
 
   const [inquiryDetail, setInquiryDetal] = useState({});
@@ -38,6 +38,7 @@ const AdminInquiryDetail = () => {
           setActiveIndex={setActiveIndex}
           activeSubIndex={activeSubIndex}
           setActiveSubIndex={setActiveSubIndex}
+          isNavOpen={isNavOpen}
         />
         <div className="admin-container container m-0">
           <div className="admin-title admin-no-title flex f-20 fw-600">

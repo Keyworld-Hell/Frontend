@@ -7,7 +7,7 @@ import axios from "axios";
 
 const SERVER_URL = "http://localhost:3000";
 
-const AdminBoard = () => {
+const AdminBoard = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(5);
 
@@ -30,6 +30,7 @@ const AdminBoard = () => {
         setActiveIndex={setActiveIndex}
         activeSubIndex={activeSubIndex}
         setActiveSubIndex={setActiveSubIndex}
+        isNavOpen={isNavOpen}
       />
       <div className="admin-container admin-board container m-0">
         <div className="board-container m-0">

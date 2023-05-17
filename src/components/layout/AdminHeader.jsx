@@ -2,7 +2,7 @@ import React from "react";
 
 import logo from "../../assets/img/keyworldLogo.png";
 
-const AdminHeader = () => {
+const AdminHeader = ({ setIsNavOpen }) => {
   return (
     <header className="admin-header flex">
       <div className="admin-header-logo flex">
@@ -10,7 +10,13 @@ const AdminHeader = () => {
         <span className="f-20 fw-600">Dashboard</span>
       </div>
       <div className="admin-header-toggle">
-        <button>Toggle close</button>
+        <button
+          onClick={() => {
+            setIsNavOpen((isNavOpen) => !isNavOpen);
+          }}
+        >
+          Toggle close
+        </button>
       </div>
     </header>
   );

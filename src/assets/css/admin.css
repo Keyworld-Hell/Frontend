@@ -55,6 +55,12 @@
   transition: 0.2s ease-in-out;
 }
 
+.admin-nav li:target {
+  /* Define styles for the clicked item */
+  background-color: #244497;
+  color: #fff;
+}
+
 .nav-clicked {
   background-color: #244497;
   color: #fff;
@@ -311,7 +317,6 @@
   height: 50px;
   padding: 10px;
 }
-
 
 /* Inquiry*/
 

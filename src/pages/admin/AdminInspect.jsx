@@ -8,7 +8,7 @@ import axios from "axios";
 
 const SERVER_URL = "http://localhost:3000";
 
-const AdminInspect = () => {
+const AdminInspect = ({ isNavOpen }) => {
   const [activeIndex, setActiveIndex] = useState(2);
   const [activeSubIndex, setActiveSubIndex] = useState(0);
 
@@ -31,6 +31,7 @@ const AdminInspect = () => {
         setActiveIndex={setActiveIndex}
         activeSubIndex={activeSubIndex}
         setActiveSubIndex={setActiveSubIndex}
+        isNavOpen={isNavOpen}
       />
       <div className="admin-container container m-0">
         <div className="admin-title admin-tech-search flex f-20 fw-600">
