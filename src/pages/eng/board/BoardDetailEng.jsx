@@ -16,7 +16,7 @@ const BoardDetailEng = () => {
   return (
     <>
       <PageImage img={"board-img"} title="Board" />
-      <PageTitle title={"Board" + " > " + "현진 하드웨어" + {}} />
+      <PageTitle title={"Board"} />
       <div className="container m-0">
         <div className="board-subtitle flex f-20 fw-700">
           This is a bulletin board where free communication is possible.

@@ -14,7 +14,10 @@
   padding-top: 20px;
 }
 .home-product {
-
+}
+.home-product:hover {
+  transform: translateY(-5px);
+  transition: 0.8s ease-in-out;
 }
 .home-products-list {
   justify-content: space-between;

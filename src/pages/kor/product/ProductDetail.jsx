@@ -2,24 +2,37 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
-
+import { useEffect } from "react";
+import axios from "axios";
 import img from "../../../assets/img/key.png";
+import test from "../../../assets/img/iso-9001.png";
 import drawing from "../../../assets/img/drawing.png";
 
-import { PRODUCT_LIST } from "../../../store";
+
 
 const ProductDetail = () => {
   const [isModal, setIsModal] = useState(false);
   const [isArrow, setIsarrow] = useState();
+  const [PRODUCT_KEY, setPRODUCT_KEY] = useState([]);
   const clickHandler = () => {
     setIsModal((isModal) => !isModal);
     setIsarrow((isArrow) => !isArrow);
   };
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/product/1")
+      .then((response) => {
+        setPRODUCT_KEY(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <>
       <PageImage img={"product-img"} title="Product" />
-      <PageTitle title={"제품소개"} />
+      <PageTitle title={"제품소개" + {}} />
       <div className="container-only-product m-0 flex">
         <div className="product-detail-container m-0">
           <button className="product-list-btn flex f-20 fw-700  color-white">
@@ -81,6 +94,10 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="product-detail-drawing flex">
+            {/* {PRODUCT_KEY.map((item) => (
+              <img src={img}/>
+          ))} */}
+            <img src={test} />
             <img src={drawing} alt={drawing} />
             <img src={drawing} alt={drawing} />
             <img src={drawing} alt={drawing} />
@@ -88,6 +105,7 @@ const ProductDetail = () => {
             <img src={drawing} alt={drawing} />
             <img src={drawing} alt={drawing} />
             <img src={drawing} alt={drawing} />
+            <img src={test} />
           </div>
         </div>
       </div>
