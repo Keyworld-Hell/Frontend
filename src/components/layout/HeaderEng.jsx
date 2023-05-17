@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 import logo from "../../assets/img/logo.png";
 import us from "../../assets/img/us.png";
+import hamMenu from "../../assets/img/menu.svg";
 import HeaderMenuEng from "./HeaderMenuEng";
+import HeaderMenuNavEng from "./HeaderMenuNavEng";
 
 const HeaderEng = () => {
   const [isHover, setIsHover] = useState(false);
+  const [isNavClick, setIsNavClick] = useState(false);
 
   return (
     <>
@@ -57,8 +59,17 @@ const HeaderEng = () => {
             </ul>
           </nav>
         </div>
+        <div
+          className="header-hamburger cursor"
+          onClick={() => {
+            setIsNavClick((isNavClick) => !isNavClick);
+          }}
+        >
+          <img src={hamMenu} className="header-menu-icon m-0" alt="error" />
+        </div>
       </header>
       {isHover && <HeaderMenuEng setIsHover={setIsHover} />}
+      <HeaderMenuNavEng isNavClick={isNavClick} />
     </>
   );
 };
