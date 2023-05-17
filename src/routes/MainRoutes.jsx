@@ -15,6 +15,7 @@ import Product from "../pages/kor/product/Product";
 import ProductDetail from "../pages/kor/product/ProductDetail";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
+import BoardWrite from "../pages/kor/board/BoardWrite";
 
 const KorRoutes = () => {
   return (
@@ -31,6 +32,7 @@ const KorRoutes = () => {
         <Route path="/product/:lock" element={<Product />} />
         <Route path="/product/:lock/:id" element={<ProductDetail />} />
         <Route path="/inquiry" element={<Inquiry />} />
+        <Route path="/board/write" element={<BoardWrite />} />
         <Route path="/board" element={<Board />} />
         <Route path="/board/:id" element={<BoardDetail />} />
       </Routes>
