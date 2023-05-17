@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 import Pagination from "../../components/pagination/Pagination";
+import AdminCompanyBox from "../../components/admin/AdminCompanyBox";
 
 const SERVER_URL = "http://localhost:3000";
 
@@ -64,17 +65,7 @@ const AdminInspect = ({ isNavOpen }) => {
             </div>
           </div>
           {companyList.map((item) => (
-            <div className="admin-tech-contents flex">
-              <div className="admin-tech-box">
-                <div className="admin-tech-img">
-                  <img src={item.img} alt={item.img} />
-                </div>
-                <div className="admin-tech-name flex f-20 fw-700">
-                  {item.name}
-                </div>
-                <button className="admin-tech-btn color-white">X</button>
-              </div>
-            </div>
+            <AdminCompanyBox img={item.img} name={item.name} />
           ))}
         </div>
         {companyList.length === 0 && (
