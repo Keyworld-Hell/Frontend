@@ -5,14 +5,24 @@ import img from "../../assets/img/inspect.png";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
+import Pagination from "../../components/pagination/Pagination";
 
 const SERVER_URL = "http://localhost:3000";
 
 const AdminInspect = ({ isNavOpen }) => {
   const [activeIndex, setActiveIndex] = useState(2);
   const [activeSubIndex, setActiveSubIndex] = useState(0);
-
   const [companyList, setCompanyList] = useState([]);
+  const [pageNumber, setPageNumber] = useState(7);
+  const [cur, setCur] = useState(1);
+
+  const pageList = [];
+
+  if (pageList.length === 0) {
+    for (let i = 1; i <= pageNumber; i++) {
+      pageList.push(i);
+    }
+  }
 
   const fetchCertificate = async () => {
     await axios.get(`${SERVER_URL}/0/company`).then((res) => {
@@ -67,6 +77,9 @@ const AdminInspect = ({ isNavOpen }) => {
             </div>
           ))}
         </div>
+        {companyList.length === 0 && (
+          <Pagination cur={cur} setCur={setCur} pageList={pageList} />
+        )}
       </div>
     </div>
   );
