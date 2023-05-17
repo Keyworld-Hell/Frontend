@@ -5,6 +5,7 @@ import img from "../../assets/img/inspect.png";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
+import Pagination from "../../components/pagination/Pagination";
 
 const SERVER_URL = "http://localhost:3000";
 
@@ -12,6 +13,16 @@ const AdminCertificate = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(1);
   const [certificationList, setCertificationList] = useState([]);
+  const [pageNumber, setPageNumber] = useState(7);
+  const [cur, setCur] = useState(1);
+
+  const pageList = [];
+
+  if (pageList.length === 0) {
+    for (let i = 1; i <= pageNumber; i++) {
+      pageList.push(i);
+    }
+  }
 
   const fetchCertificate = async () => {
     await axios.get(`${SERVER_URL}/0/certification`).then((res) => {
@@ -52,6 +63,15 @@ const AdminCertificate = ({ isNavOpen }) => {
               <button className="admin-tech-btn color-white">X</button>
             </div>
           </div>
+          <div className="admin-tech-contents flex">
+            <div className="admin-tech-box">
+              <div className="admin-tech-img">
+                <img src={img} alt={img} />
+              </div>
+              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
+              <button className="admin-tech-btn color-white">X</button>
+            </div>
+          </div>
 
           {certificationList.map((item) => (
             <div className="admin-tech-contents flex">
@@ -67,6 +87,9 @@ const AdminCertificate = ({ isNavOpen }) => {
             </div>
           ))}
         </div>
+        {certificationList.length === 0 && (
+          <Pagination cur={cur} setCur={setCur} pageList={pageList} />
+        )}
       </div>
     </div>
   );
