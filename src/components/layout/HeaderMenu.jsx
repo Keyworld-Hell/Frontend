@@ -57,67 +57,67 @@ const HeaderMenu = ({ setIsHover }) => {
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/dimplelock`} className={"color-white"}>
                   딤플 록
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/disclock`} className={"color-white"}>
                   디스크 록
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/switchlock`} className={"color-white"}>
                   스위치 록
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
-                  캠 럭
+                <a href={`/product/camlock`} className={"color-white"}>
+                  캠 록
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/saunalock`} className={"color-white"}>
                   사우나 록
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/steellock`} className={"color-white"}>
                   철재 록
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/digitallock`} className={"color-white"}>
                   디지털 록
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/hinge`} className={"color-white"}>
                   경 첩
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/handle`} className={"color-white"}>
                   핸 들
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/special`} className={"color-white"}>
                   스페셜
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/etclock`} className={"color-white"}>
                   기 타
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/customlock`} className={"color-white"}>
                   주문 제작
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/product/npartlock`} className={"color-white"}>
                   개발
                 </a>
               </div>

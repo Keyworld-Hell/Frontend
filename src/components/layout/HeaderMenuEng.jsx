@@ -57,67 +57,67 @@ const HeaderMenuEng = ({ setIsHover }) => {
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/dimplelock`} className={"color-white"}>
                   Dimple Lock
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/disclock`} className={"color-white"}>
                   Disc Lock
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/switchlock`} className={"color-white"}>
                   Switch Lock
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/camlock`} className={"color-white"}>
                   Cam Lock
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/saunalock`} className={"color-white"}>
                   Sauna Lock
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/steellock`} className={"color-white"}>
                   Steel Lock
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/digitallock`} className={"color-white"}>
                   Digital Lock
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/hinge`} className={"color-white"}>
                   Hinge
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/handle`} className={"color-white"}>
                   Handle
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/special`} className={"color-white"}>
                   Special
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/etclock`} className={"color-white"}>
                   Etc
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/customlock`} className={"color-white"}>
                   Custom Lock
                 </a>
               </div>
               <div>
-                <a href={`/eng/product/circularlock`} className={"color-white"}>
+                <a href={`/eng/product/npartlock`} className={"color-white"}>
                   N-part
                 </a>
               </div>
