@@ -21,14 +21,16 @@ const Modal = (props) => {
   return (
     <div className="modal-wrapper">
       <div className="modal-container flex">
-        <button
-          className="modal-btn color-white cursor f-30"
-          onClick={() => props.setIsModal(false)}
-        >
-          X
-        </button>
         <div className="modal-content flex">
-          <img src={props.img} alt={props.img} />
+          
+            <img src={props.img} alt={props.title} />
+            <button
+              className="modal-btn color-white cursor f-30"
+              onClick={() => props.setIsModal(false)}
+            >
+              X
+            </button>
+
         </div>
       </div>
     </div>

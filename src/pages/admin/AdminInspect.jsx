@@ -36,7 +36,7 @@ const AdminInspect = ({ isNavOpen }) => {
   }, [companyList]);
 
   return (
-    <div className="flex">
+    <div className="admin-wrap flex">
       <AdminNav
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}

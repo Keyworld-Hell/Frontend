@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+import AdminNav from "./AdminNav";
 
 import logo from "../../assets/img/keyworldLogo.png";
 import { useLocation } from "react-router-dom";
@@ -21,6 +23,7 @@ const AdminHeader = ({ setIsNavOpen }) => {
         >
           Toggle close
         </button>
+        <button>Toggle close</button>
       </div>
     </header>
   );

@@ -1,5 +1,7 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+
+import ScrollToTop from "./components/layout/ScrollTop";
 import Header from "./components/layout/Header";
 import { useState } from "react";
 
@@ -18,6 +20,10 @@ import Footer from "./components/layout/Footer";
 import AdminRoutes from "./routes/AdminRoutes";
 import MainRoutes from "./routes/MainRoutes";
 import AdminLogin from "./pages/admin/AdminLogin";
+
+import TopButton from "./components/layout/TopButton";
+import EngRoutes from "./routes/EngRoutes";
+import KorRoutes from "./routes/MainRoutes";
 
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(true);
@@ -48,6 +54,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Footer />} />
       </Routes>
+      <Route path="/*" element={<KorRoutes />} />
+      <Route path="/eng/*" element={<EngRoutes />} />
+
+      <TopButton />
     </>
   );
 }
