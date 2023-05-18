@@ -16,6 +16,7 @@ import ProductDetail from "../pages/kor/product/ProductDetail";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import BoardWrite from "../pages/kor/board/BoardWrite";
+import TopButton from "../components/layout/TopButton";
 
 const KorRoutes = () => {
   return (
@@ -37,6 +38,7 @@ const KorRoutes = () => {
         <Route path="/board/:id" element={<BoardDetail />} />
       </Routes>
       <Footer />
+      <TopButton />
     </>
   );
 };

@@ -10,7 +10,7 @@ const AdminHeader = ({ setIsNavOpen }) => {
   const isSpecialPage = location.pathname === "/admin";
 
   return (
-    <header className={"admin-header flex " + (isSpecialPage && "hidden")}>
+    <div className={"admin-header flex " + (isSpecialPage && " hidden")}>
       <div className="admin-header-logo flex">
         <img src={logo} alt={logo} />
         <span className="f-20 fw-600">Dashboard</span>
@@ -23,9 +23,8 @@ const AdminHeader = ({ setIsNavOpen }) => {
         >
           Toggle close
         </button>
-        <button>Toggle close</button>
       </div>
-    </header>
+    </div>
   );
 };
 

@@ -41,23 +41,9 @@ function App() {
           path="/admin/*"
           element={<AdminRoutes isNavOpen={isNavOpen} />}
         />
+        <Route path="/eng/*" element={<EngRoutes />} />
+        <Route path="/*" element={<KorRoutes />} />
       </Routes>
-      <Routes>
-        <Route path="/admin" element={<></>} />
-      </Routes>
-      <Routes>
-        <Route path="/" element={<Header />} />
-      </Routes>
-      <Routes>
-        <Route path="/" element={<MainRoutes />} />
-      </Routes>
-      <Routes>
-        <Route path="/" element={<Footer />} />
-      </Routes>
-      <Route path="/*" element={<KorRoutes />} />
-      <Route path="/eng/*" element={<EngRoutes />} />
-
-      <TopButton />
     </>
   );
 }
