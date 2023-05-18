@@ -4,6 +4,7 @@ import axios from "axios";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 import Pagination from "../../../components/Pagination";
+import client from "../../../client";
 
 const BoardWrite = () => {
   const [title, setTitle] = useState("");
@@ -50,7 +51,7 @@ const BoardWrite = () => {
 
     if (confirmed) {
       try {
-        const response = await axios.post("/board/write", {
+        const response = await client.post("/board/new", {
           title,
           name,
           content,

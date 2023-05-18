@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
+import client from "../../../client";
 
 const Inquiry = () => {
   const [name, setName] = useState("");
@@ -23,7 +24,7 @@ const Inquiry = () => {
       return;
     }
 
-    const response = await axios.post("/admin/inquiry", {
+    const response = await client.post("/inquiry/new", {
       name: name,
       manager: manager,
       email: email,

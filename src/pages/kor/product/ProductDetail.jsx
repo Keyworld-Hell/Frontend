@@ -7,6 +7,7 @@ import axios from "axios";
 import img from "../../../assets/img/key.png";
 import test from "../../../assets/img/iso-9001.png";
 import drawing from "../../../assets/img/drawing.png";
+import client from "../../../client";
 
 
 
@@ -19,8 +20,8 @@ const ProductDetail = () => {
     setIsarrow((isArrow) => !isArrow);
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:4000/product/1")
+    client
+      .get("/product/1")
       .then((response) => {
         setPRODUCT_KEY(response.data);
       })
@@ -32,7 +33,7 @@ const ProductDetail = () => {
   return (
     <>
       <PageImage img={"product-img"} title="Product" />
-      <PageTitle title={"제품소개" + {}} />
+      <PageTitle title={"제품소개"} />
       <div className="container-only-product m-0 flex">
         <div className="product-detail-container m-0">
           <button className="product-list-btn flex f-20 fw-700  color-white">

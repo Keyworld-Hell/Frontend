@@ -4,6 +4,7 @@ import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 
 import Modal from "../../../components/layout/Modal";
+import client from "../../../client";
 
 const Certificate = () => {
   const [data, setData] = useState([]);
@@ -11,7 +12,7 @@ const Certificate = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await axios.get("http://localhost:4000/certification").then((res) => {
+      await client.get("/certification").then((res) => {
         if (Array.isArray(res.data)) {
           setData(res.data);
         }

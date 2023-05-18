@@ -4,6 +4,7 @@ import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 import { Link } from "react-router-dom";
 import Pagination from "../../../components/Pagination";
+import client from "../../../client";
 
 const ITEMS_PER_PAGE = 10;
 
@@ -13,8 +14,8 @@ const Board = () => {
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:4000/board", {
+    client
+      .get("/board", {
         params: {
           _page: currentPage,
           _limit: ITEMS_PER_PAGE,

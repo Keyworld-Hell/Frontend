@@ -11,7 +11,12 @@ header {
   width: 100%;
   max-width: 1920px;
 }
-
+.header-logo{
+  width: 200px;
+}
+.header-nav{
+  max-width: 1720px;
+}
 .header-hamburger {
   display: none;
   width: 70px;
@@ -94,7 +99,7 @@ header {
     justify-content: right;
     align-items: center;
   }
-  .header-container {
+  .header-nav {
     display: none;
   }
 

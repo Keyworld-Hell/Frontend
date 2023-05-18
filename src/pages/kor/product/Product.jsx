@@ -9,14 +9,15 @@ import img from "../../../assets/img/key.png";
 import logo from "../../../assets/img/logo.png";
 
 import { PRODUCT_LIST } from "../../../store";
+import client from "../../../client";
 
 const Product = () => {
   const params = useParams();
   const[PRODUCT_KEY, setPRODUCT_KEY] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:4000/product")
+    client
+      .get("/product")
       .then((response) => {
         setPRODUCT_KEY(response.data);
       })
