@@ -2,14 +2,22 @@ import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 
-const AdminTechUpload = () => {
+import axios from "axios";
+
+const SERVER_URL = "http://localhost:3000";
+
+const AdminTechUpload = ({ isNavOpen }) => {
   const fileRef = useRef();
+  const nameRef = useRef();
+
+  const { title } = useParams();
+
+  const initialActiveIndex = title === "certification" ? 1 : 2;
+
   const [fileName, setFileName] = useState("파일을 선택하세요.");
   const [fileImg, setFileImg] = useState();
-  const [activeSubIndex, setActiveSubIndex] = useState(1);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const params = useParams();
+  const [activeSubIndex, setActiveSubIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(initialActiveIndex);
 
   const previewImg = () => {
     const file = fileRef.current.files[0];
@@ -20,6 +28,22 @@ const AdminTechUpload = () => {
     };
   };
 
+  const postDataHandler = () => {
+    if (!nameRef.current.value || !fileRef.current.files[0]) {
+      alert("빈칸을 채워주세요.");
+      return;
+    }
+
+    const formdata = new FormData();
+    formdata.append("name", nameRef.current.value);
+    formdata.append("file", fileRef.current.files[0]);
+
+    axios
+      .post(`${SERVER_URL}/adm/${title}/new`, formdata)
+      .then((res) => alert("등록 완료!"))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div className="flex">
       <AdminNav
@@ -27,11 +51,17 @@ const AdminTechUpload = () => {
         setActiveIndex={setActiveIndex}
         activeSubIndex={activeSubIndex}
         setActiveSubIndex={setActiveSubIndex}
+        isNavOpen={isNavOpen}
       />
       <div className="admin-container container m-0">
         <div className="admin-title flex f-20 fw-600 cap">
-          {params.title}
-          <button className="admin-upload-btn color-white">등록</button>
+          {title}
+          <button
+            className="admin-upload-btn color-white"
+            onClick={postDataHandler}
+          >
+            등록
+          </button>
         </div>
         <div className="admin-upload-img">
           {fileImg && <img src={fileImg} alt={fileImg} />}
@@ -59,7 +89,11 @@ const AdminTechUpload = () => {
         <div className="admin-upload-subtitle">
           <span className="f-20 fw-600">이름</span>
         </div>
-        <input className="admin-upload-tech-name f-20" placeholder="이름" />
+        <input
+          className="admin-upload-tech-name f-20"
+          placeholder="이름"
+          ref={nameRef}
+        />
       </div>
     </div>
   );

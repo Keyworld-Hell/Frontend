@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
-import { INQUIRY_LIST } from "../../store/nav";
 
-const AdminInquiry = () => {
+import axios from "axios";
+
+const SERVER_URL = "http://localhost:3000";
+
+const AdminInquiry = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(4);
+  const [inquiryList, setInquiryList] = useState([]);
+
+  const fetchInquiry = async () => {
+    await axios
+      .get(`${SERVER_URL}/inquiry`)
+      .then((res) => setInquiryList(res.data))
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    fetchInquiry();
+  }, [inquiryList]);
 
   const subContent = (content) => {
     if (content.length > 15) {
@@ -20,6 +35,7 @@ const AdminInquiry = () => {
         setActiveIndex={setActiveIndex}
         activeSubIndex={activeSubIndex}
         setActiveSubIndex={setActiveSubIndex}
+        isNavOpen={isNavOpen}
       />
       <div className="admin-container container m-0">
         <div className="admin-notice-title flex f-24 fw-600 center">
@@ -28,7 +44,7 @@ const AdminInquiry = () => {
           <div className="admin-inquiry-content">내용</div>
           <div className="admin-inquiry-delete">삭제</div>
         </div>
-        {INQUIRY_LIST.map((item, index) => (
+        {inquiryList.map((item, index) => (
           <Link to={`${item.id}`} className="color-black" key={index}>
             <div className="admin-notice-box center flex">
               <div className="admin-inquiry-date">{item.created_date}</div>

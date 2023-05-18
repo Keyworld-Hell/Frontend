@@ -55,6 +55,12 @@
   transition: 0.2s ease-in-out;
 }
 
+.admin-nav li:target {
+  /* Define styles for the clicked item */
+  background-color: #244497;
+  color: #fff;
+}
+
 .nav-clicked {
   background-color: #244497;
   color: #fff;
@@ -81,6 +87,7 @@
 
 .admin-title {
   width: 100%;
+  min-width: 1024px;
   margin-top: 40px;
   height: 40px;
   align-items: end;
@@ -309,10 +316,6 @@
   width: 350px;
   height: 50px;
   padding: 10px;
-}
-
-.admin-product-container {
-  width: 1350px;
 }
 
 /* Inquiry*/
@@ -624,4 +627,56 @@ input[id="check"]:checked + label {
 
 .admin-board-delete-btn:hover {
   background: rgb(255, 75, 75);
+}
+
+.admin-login-box {
+  width: 400px;
+  height: 400px;
+  margin-top: 100px !important;
+  border: 3px solid #244497;
+  border-radius: 20px;
+}
+
+.admin-login-title {
+  width: 100%;
+  height: 70px;
+  background-color: #244497;
+  border-radius: 16px 16px 0 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-login-id {
+  padding-top: 50px;
+  width: 300px;
+}
+
+.admin-login-pw {
+  padding-top: 20px;
+  width: 300px;
+}
+
+.admin-login-input input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+}
+
+.admin-login-btnbox {
+  margin-top: 60px !important;
+  width: 100px;
+  height: 30px;
+}
+
+.admin-login-btn {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  background-color: #ff7f00;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.admin-login-btn:hover {
+  background-color: #ff9831;
 }

@@ -7,6 +7,7 @@ const AdminNav = ({
   setActiveIndex,
   activeSubIndex,
   setActiveSubIndex,
+  isNavOpen,
 }) => {
   const [activeProductIndex, setActiveProductIndex] = useState(0);
 
@@ -19,7 +20,7 @@ const AdminNav = ({
   };
 
   return (
-    <div className="flex">
+    <div className={"flex" + (isNavOpen ? "" : " hidden")}>
       <nav className="admin-nav">
         <ul>
           {NAV_LIST.map((item, index) => (
