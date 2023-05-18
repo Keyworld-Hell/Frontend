@@ -1,0 +1,33 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut{ /* Safari and Chrome */
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 0;
+    }
+}
