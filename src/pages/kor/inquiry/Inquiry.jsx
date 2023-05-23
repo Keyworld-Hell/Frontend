@@ -22,13 +22,15 @@ const Inquiry = () => {
       return;
     }
 
-    const response = await axios.post("/admin/inquiry", {
-      name: name,
-      manager: manager,
-      email: email,
-      phone: phone,
-      content: content.replace(/\n/g, "<br />"),
-    });
+    const formdata = new FormData();
+
+    formdata.append("name", name);
+    formdata.append("title", manager);
+    formdata.append("email", email);
+    formdata.append("phone", phone);
+    formdata.append("content", content.replace(/\n/g, "<br />"));
+
+    const response = await axios.post("/inquiry/new", formdata);
     console.log(response.data);
     window.alert("문의를 보내시겠습니까?");
     navigate("/inquiry");
