@@ -26,14 +26,27 @@ const AdminInspect = ({ isNavOpen }) => {
   }
 
   const fetchCertificate = async () => {
-    await axios.get(`${SERVER_URL}/0/company`).then((res) => {
+    await axios.get(`/0/company`).then((res) => {
       setCompanyList(res.data);
+      console.log(res.data);
     });
+  };
+
+  const deleteClick = (id) => {
+    if (window.confirm("삭제하시겠습니까?")) {
+      axios
+        .delete(`/adm/certification/delete/${id}`)
+        .then((res) => {
+          setCompanyList(companyList.filter((item) => item.id !== id));
+          alert("삭제 완료!");
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   useEffect(() => {
     fetchCertificate();
-  }, [companyList]);
+  }, []);
 
   return (
     <div className="admin-wrap flex">
@@ -65,7 +78,12 @@ const AdminInspect = ({ isNavOpen }) => {
             </div>
           </div>
           {companyList.map((item) => (
-            <AdminCompanyBox img={item.img} name={item.name} />
+            <AdminCompanyBox
+              id={item.id}
+              img={item.img}
+              title={item.title}
+              deleteClick={deleteClick}
+            />
           ))}
         </div>
         {companyList.length === 0 && (

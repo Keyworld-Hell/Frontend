@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Admin from "../pages/admin/Admin";
+import Admin from "../pages/admin/AdminNoticeUpload";
 import AdminNotice from "../pages/admin/AdminNotice";
 import AdminCertificate from "../pages/admin/AdminCertificate";
 import AdminInspect from "../pages/admin/AdminInspect";
@@ -15,11 +15,16 @@ import Header from "../components/layout/Header";
 import AdminHeader from "../components/layout/AdminHeader";
 import AdminCertificateEng from "../pages/admin/AdminCertificateEng";
 import AdminInspectEng from "../pages/admin/AdminInspectEng";
+import AdminProductEng from "../pages/admin/AdminProductEng";
+import AdminUpload from "../pages/admin/AdminNoticeUpload";
 
 const AdminRoutes = ({ isNavOpen }) => {
   return (
     <Routes>
-      <Route path="notice/register" element={<Admin isNavOpen={isNavOpen} />} />
+      <Route
+        path="notice/register"
+        element={<AdminUpload isNavOpen={isNavOpen} />}
+      />
       <Route
         path="certificate"
         element={<AdminCertificate isNavOpen={isNavOpen} />}
@@ -38,6 +43,10 @@ const AdminRoutes = ({ isNavOpen }) => {
         path="product/:lock"
         element={<AdminProduct isNavOpen={isNavOpen} />}
       />
+      <Route
+        path="product/:lock/eng"
+        element={<AdminProductEng isNavOpen={isNavOpen} />}
+      />
       <Route path="inquiry" element={<AdminInquiry isNavOpen={isNavOpen} />} />
       <Route
         path="inquiry/:id"
@@ -49,7 +58,7 @@ const AdminRoutes = ({ isNavOpen }) => {
         element={<AdminBoardDetail isNavOpen={isNavOpen} />}
       />
       <Route
-        path=":title/upload"
+        path=":title/upload/*"
         element={<AdminTechUpload isNavOpen={isNavOpen} />}
       />
       <Route path="notice" element={<AdminNotice isNavOpen={isNavOpen} />} />
