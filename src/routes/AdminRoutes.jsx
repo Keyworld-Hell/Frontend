@@ -14,6 +14,7 @@ import AdminBoardDetail from "../pages/admin/AdminBoardDetail";
 import Header from "../components/layout/Header";
 import AdminHeader from "../components/layout/AdminHeader";
 import AdminCertificateEng from "../pages/admin/AdminCertificateEng";
+import AdminInspectEng from "../pages/admin/AdminInspectEng";
 
 const AdminRoutes = ({ isNavOpen }) => {
   return (
@@ -28,6 +29,11 @@ const AdminRoutes = ({ isNavOpen }) => {
         element={<AdminCertificateEng isNavOpen={isNavOpen} />}
       />
       <Route path="inspect" element={<AdminInspect isNavOpen={isNavOpen} />} />
+      <Route
+        path="inspect/eng"
+        element={<AdminInspectEng isNavOpen={isNavOpen} />}
+      />
+
       <Route
         path="product/:lock"
         element={<AdminProduct isNavOpen={isNavOpen} />}
