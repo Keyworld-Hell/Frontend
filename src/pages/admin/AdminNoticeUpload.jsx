@@ -3,9 +3,7 @@ import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
 
-const SERVER_URL = "http://localhost:3000";
-
-const Admin = ({ isNavOpen }) => {
+const AdminUpload = ({ isNavOpen }) => {
   const fileRef = useRef();
   const dateRef = useRef();
   const contentRef = useRef();
@@ -35,12 +33,19 @@ const Admin = ({ isNavOpen }) => {
     }
 
     const formdata = new FormData();
-    formdata.append("date", dateRef.current.value);
-    formdata.append("file", fileRef.current.files[0]);
+    // formdata.append("file", fileRef.current.files[0]);
+    formdata.append("title", "Title!");
     formdata.append("content", contentRef.current.value);
+    formdata.append("year", dateRef.current.value.substr(0, 4));
+    formdata.append("month", dateRef.current.value.substr(5, 2));
+    formdata.append("day", dateRef.current.value.substr(8, 2));
 
     axios
-      .post(`${SERVER_URL}/adm/notice/new`, formdata)
+      .post(`/adm/notice/new`, formdata, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
       .then((res) => alert("등록 완료!"))
       .catch((err) => console.log(err));
   };
@@ -88,7 +93,17 @@ const Admin = ({ isNavOpen }) => {
         </div>
         <span className="f-20 fw-600">공지 기간 설정</span>
         <div className="admin-upload-date">
-          <input type="date" ref={dateRef} />
+          <input
+            type="date"
+            ref={dateRef}
+            onChange={(res) =>
+              console.log(
+                res.target.value.substr(0, 4),
+                res.target.value.substr(5, 2),
+                res.target.value.substr(8, 2)
+              )
+            }
+          />
         </div>
         <div className="admin-upload-subtitle">
           <span className="f-20 fw-600">내용</span>
@@ -99,4 +114,4 @@ const Admin = ({ isNavOpen }) => {
   );
 };
 
-export default Admin;
+export default AdminUpload;
