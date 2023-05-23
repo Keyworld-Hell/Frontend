@@ -67,7 +67,11 @@ const AdminNav = ({
             {PRODUCT_NAV_LIST.map((item, index) => (
               <Link
                 key={index}
-                to={`/admin/product/${item.eng}`}
+                to={
+                  activeSubIndex === 0
+                    ? `/admin/product/${item.number}`
+                    : `/admin/product/${item.number}/eng`
+                }
                 className="color-black"
               >
                 <li
