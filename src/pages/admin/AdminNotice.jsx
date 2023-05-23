@@ -4,8 +4,6 @@ import AdminNav from "../../components/layout/AdminNav";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const SERVER_URL = "http://localhost:3000";
-
 const AdminNotice = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,14 +12,27 @@ const AdminNotice = ({ isNavOpen }) => {
 
   const fetchNotice = async () => {
     await axios
-      .get(`${SERVER_URL}/notice`)
-      .then((res) => setNoticeList(res.data))
+      .get(`/adm/notice`)
+      .then((res) => {
+        setNoticeList(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const deleteClick = (id) => {
+    axios
+      .delete(`/adm/notice/delete/${id}`)
+      .then((res) => {
+        setNoticeList(noticeList.filter((item) => item.id !== id));
+        console.log(res);
+      })
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
     fetchNotice();
-  }, [noticeList]);
+  }, []);
 
   return (
     <div className="admin-wrap flex">
@@ -44,10 +55,19 @@ const AdminNotice = ({ isNavOpen }) => {
           <div className="admin-notice-delete">삭제</div>
         </div>
         {noticeList.map((item) => (
-          <div className="admin-notice-box center flex">
-            <div className="admin-notice-date">{item.date}</div>
+          <div className="admin-notice-box center flex" key={item.id}>
+            <div className="admin-notice-date">
+              {item.createdAt.substr(0, 10)}
+            </div>
             <div className="admin-notice-content">{item.content}</div>
-            <div className="admin-notice-delete">삭제</div>
+            <div
+              className="admin-notice-delete"
+              onClick={() => {
+                deleteClick(item.id);
+              }}
+            >
+              삭제
+            </div>
           </div>
         ))}
       </div>
