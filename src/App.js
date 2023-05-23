@@ -23,11 +23,13 @@ import AdminLogin from "./pages/admin/AdminLogin";
 import TopButton from "./components/layout/TopButton";
 import EngRoutes from "./routes/EngRoutes";
 import KorRoutes from "./routes/MainRoutes";
+import Seo from "../src/Seo"
 
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(true);
   return (
     <>
+      <Seo/>
       <Routes>
         <Route
           path="/admin/*"
