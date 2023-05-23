@@ -1,3 +1,21 @@
 # https://www.robotstxt.org/robotstxt.html
+Sitemap: http://kwd.co.kr//sitemap.xml
+
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /adm
+
+User-agent: Yeti
+Allow : / 
+Disallow: /admin
+Disallow: /adm
+
+User-agent: Googlebot
+Allow : /
+Disallow: /admin
+Disallow: /adm
+
+User-agent:	Googlebot-image
+Allow : / 
+Disallow: /admin
+Disallow: /adm
