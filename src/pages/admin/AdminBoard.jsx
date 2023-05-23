@@ -21,7 +21,7 @@ const AdminBoard = ({ isNavOpen }) => {
 
   useEffect(() => {
     fetchBoard();
-  }, [boardList]);
+  }, []);
 
   return (
     <div className="admin-wrap flex">

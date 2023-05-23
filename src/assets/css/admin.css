@@ -1,4 +1,4 @@
-.admin-wrap{
+.admin-wrap {
   padding-top: 70px;
   max-width: 1920px;
 }
@@ -24,7 +24,7 @@
   width: 42px;
   height: 50px;
 }
-.admin-nav-wrap{
+.admin-nav-wrap {
 }
 .admin-nav {
   width: 240px;
@@ -403,7 +403,7 @@
   display: none;
 } */
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   display: inline-block;
   width: 25px;
   height: 25px;
