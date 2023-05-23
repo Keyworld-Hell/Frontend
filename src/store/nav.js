@@ -42,9 +42,11 @@ export const NAV_SUB_LIST = [
     contents: [
       {
         title: "korea",
+        addr: "/admin/certificate",
       },
       {
         title: "english",
+        addr: "/admin/certificate/eng",
       },
     ],
   },
