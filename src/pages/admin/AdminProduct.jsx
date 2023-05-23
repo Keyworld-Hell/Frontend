@@ -7,8 +7,6 @@ import { Link, useParams } from "react-router-dom";
 
 import axios from "axios";
 
-const SERVER_URL = "http://localhost:3000";
-
 const AdminProduct = ({ isNavOpen }) => {
   const params = useParams();
 
@@ -18,14 +16,17 @@ const AdminProduct = ({ isNavOpen }) => {
 
   const fetchProduct = async () => {
     await axios
-      .get(`${SERVER_URL}/0/products/${params.lock}`)
-      .then((res) => setProductList(res.data))
+      .get(`/0/products/${params.lock}`)
+      .then((res) => {
+        setProductList(res.data);
+        console.log(res.data);
+      })
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
     fetchProduct();
-  }, [productList]);
+  }, [params.lock]);
 
   return (
     <div className="admin-wrap flex">
