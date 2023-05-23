@@ -12,7 +12,7 @@ const Certificate = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await client.get("/certification").then((res) => {
+      await client.get("/0/certification").then((res) => {
         if (Array.isArray(res.data)) {
           setData(res.data);
         }

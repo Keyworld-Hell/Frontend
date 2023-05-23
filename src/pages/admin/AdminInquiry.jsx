@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
+import client from "../../client";
 
 const AdminInquiry = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
@@ -10,9 +11,11 @@ const AdminInquiry = ({ isNavOpen }) => {
   const [inquiryList, setInquiryList] = useState([]);
 
   const fetchInquiry = async () => {
-    await axios
+    await client
       .get(`/inquiry`)
+
       .then((res) => {
+        console.log(res);
         setInquiryList(res.data.content);
       })
       .catch((err) => console.log(err));
@@ -21,7 +24,7 @@ const AdminInquiry = ({ isNavOpen }) => {
   const deleteClick = (id, e) => {
     e.stopPropagation();
     if (window.confirm("삭제하시겠습니까?")) {
-      axios
+      client
         .delete(`/adm/inquiry/delete/${id}`)
         .then((res) => {
           setInquiryList(inquiryList.filter((item) => item.id !== id));

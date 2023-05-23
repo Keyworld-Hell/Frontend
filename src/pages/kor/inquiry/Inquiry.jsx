@@ -30,7 +30,10 @@ const Inquiry = () => {
     formdata.append("phone", phone);
     formdata.append("content", content.replace(/\n/g, "<br />"));
 
-    const response = await axios.post("/inquiry/new", formdata);
+    const response = await client.post(
+      "/inquiry/new",
+      formdata
+    );
     console.log(response.data);
     window.alert("문의를 보내시겠습니까?");
     navigate("/inquiry");

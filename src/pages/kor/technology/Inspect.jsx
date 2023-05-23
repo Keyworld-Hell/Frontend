@@ -11,7 +11,7 @@ const Inspect = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await client.get("/company").then((res) => {
+      await client.get("/0/company").then((res) => {
         if (Array.isArray(res.data)) {
           setData(res.data);
         }

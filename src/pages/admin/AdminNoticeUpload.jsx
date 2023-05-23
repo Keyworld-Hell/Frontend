@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
+import client from "../../client";
 
 const AdminUpload = ({ isNavOpen }) => {
   const fileRef = useRef();
@@ -40,7 +41,7 @@ const AdminUpload = ({ isNavOpen }) => {
     formdata.append("month", dateRef.current.value.substr(5, 2));
     formdata.append("day", dateRef.current.value.substr(8, 2));
 
-    axios
+    client
       .post(`/adm/notice/new`, formdata, {
         headers: {
           "Content-Type": "multipart/form-data",

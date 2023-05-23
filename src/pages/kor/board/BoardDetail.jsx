@@ -1,17 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 import keymini from "../../../assets/img/keymini.png";
+import client from "../../../client";
 
 import { DUMMY_BOARD } from "../../../store/index";
 
 const BoardDetail = () => {
   const params = useParams();
+  const [boardData, setBoardData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [boardComments, setBoardComments] = useState([]);
 
   const BOARD_DETAIL = DUMMY_BOARD.filter(
     (item) => item.id === Number(params.id)
   );
+
+  useEffect(() => {
+    client
+      .get(`/board/${params.id}`)
+      .then((response) => {
+        setBoardData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    client
+      .get(`/board/${params.id}/comments`)
+      .then((response) => {
+        setBoardComments(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [params.id]);
 
   return (
     <>
@@ -29,36 +54,38 @@ const BoardDetail = () => {
         </div>
         <div className="board-container m-0">
           <div className="board-header flex f-20 fw-700 center">
-            <div className="board-id  color-blue ">ID</div>
-            <div className="board-name color-blue  ">이름</div>
-            <div className="board-title color-blue ">제목</div>
-            <div className="board-date  color-blue ">날짜</div>
+            <div className="board-id color-blue">ID</div>
+            <div className="board-name color-blue">이름</div>
+            <div className="board-title color-blue">제목</div>
+            <div className="board-date color-blue">날짜</div>
           </div>
           {BOARD_DETAIL.map((item, index) => (
-            <>
+            <React.Fragment key={index}>
               <div className="board-content f-18 flex center">
-                <div className="board-id ">{item.id}</div>
-                <div className="board-name ">{item.name}</div>
+                <div className="board-id">{item.id}</div>
+                <div className="board-name">{item.name}</div>
                 <div className="board-title fw-500">{item.title}</div>
-                <div className="board-date ">{item.created_date}</div>
+                <div className="board-date">{item.created_date}</div>
               </div>
               <div className="board-detail-title flex f-20 fw-700">내용</div>
               <div className="board-detail-content">{item.content}</div>
-            </>
+            </React.Fragment>
           ))}
           <div className="board-comment-title flex f-20 fw-700 color-blue">
             Comment
           </div>
-          <div className="board-comment">
-            <div className="board-comment-subtitle flex fw-700 f-18">
-              <img src={keymini} className ="keymini"/>
-              KEYWORLD
-              <div className="board-comment-date">2023.03.16</div>
+          {boardComments.map((item, index) => (
+            <div className="board-comment" key={index}>
+              <div className="board-comment-subtitle flex fw-700 f-18">
+                <img src={keymini} className="keymini" alt="keymini" />
+                KEYWORLD
+                <div className="board-comment-date">{item.date}</div>
+              </div>
+              <div className="board-comment-content f-16">
+                {item.comment}
+              </div>
             </div>
-            <div className="board-comment-content f-16">
-              연락 드렸습니다.
-            </div>
-          </div>
+          ))}
           <div className="board-comment-upload">
             <input
               className="board-comment-upload-name f-18"
@@ -74,9 +101,9 @@ const BoardDetail = () => {
             </button>
           </div>
           <button className="board-list-btn flex color-white fw-700 f-20">
-            <a href={`/board`} className="color-white">
+            <Link to={`/board`} className="color-white">
               목록
-            </a>
+            </Link>
           </button>
         </div>
       </div>

@@ -5,6 +5,7 @@ import img from "../../assets/img/inspect.png";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
+import client from "../../client";
 import Pagination from "../../components/pagination/Pagination";
 import AdminCompanyBox from "../../components/admin/AdminCompanyBox";
 
@@ -24,7 +25,7 @@ const AdminCertificate = ({ isNavOpen }) => {
   }
 
   const fetchCertificate = async () => {
-    await axios.get(`/0/certification`).then((res) => {
+    await client.get(`/0/certification`).then((res) => {
       setCertificationList(res.data);
       console.log(res.data);
     });

@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
-import { DUMMY_BOARD } from "../../store/nav";
-
 import axios from "axios";
-
-const SERVER_URL = "http://localhost:3000";
+import client from "../../client";
 
 const AdminBoard = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
@@ -14,7 +11,7 @@ const AdminBoard = ({ isNavOpen }) => {
   const [boardList, setBoardList] = useState([]);
 
   const fetchBoard = async () => {
-    await axios.get(`${SERVER_URL}/board`).then((res) => {
+    await client.get(`/board`).then((res) => {
       setBoardList(res.data);
     });
   };
@@ -44,7 +41,7 @@ const AdminBoard = ({ isNavOpen }) => {
           {/*
           !FEAT: DUMMY_BOARD를 boardList로 수정
            */}
-          {DUMMY_BOARD.map((item, index) => (
+          {boardList.map((item, index) => (
             <Link to={`${item.id}`} key={index} className="color-black">
               <div className="board-content f-18 flex center">
                 <div className="admin-board-id ">{item.id}</div>

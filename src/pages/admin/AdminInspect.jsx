@@ -5,10 +5,11 @@ import img from "../../assets/img/inspect.png";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
+import client from "../../client";
 import Pagination from "../../components/pagination/Pagination";
 import AdminCompanyBox from "../../components/admin/AdminCompanyBox";
 
-const SERVER_URL = "http://localhost:3000";
+
 
 const AdminInspect = ({ isNavOpen }) => {
   const [activeIndex, setActiveIndex] = useState(2);
@@ -26,7 +27,7 @@ const AdminInspect = ({ isNavOpen }) => {
   }
 
   const fetchCertificate = async () => {
-    await axios.get(`/0/company`).then((res) => {
+    await client.get(`/0/company`).then((res) => {
       setCompanyList(res.data);
       console.log(res.data);
     });

@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
-import { INQUIRY_LIST } from "../../store/nav";
+
 
 import axios from "axios";
+import client from "../../client";
 
-const SERVER_URL = "http://localhost:3000";
+
 
 const AdminInquiryDetail = ({ isNavOpen }) => {
   const params = useParams();
 
   const [inquiryDetail, setInquiryDetal] = useState({});
 
-  // const inquiry = INQUIRY_LIST.filter(
-  //   (item) => item.id === Number(params.id)
-  // )[0];
-
   const fetchInquiry = async () => {
-    await axios
+    await client
       .get(`/inquiry/${params.id}`)
       .then((res) => setInquiryDetal(res.data))
       .catch((err) => console.log(err));

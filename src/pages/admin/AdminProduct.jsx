@@ -6,6 +6,7 @@ import key from "../../assets/img/key.png";
 import { Link, useParams } from "react-router-dom";
 
 import axios from "axios";
+import client from "../../client";
 
 const AdminProduct = ({ isNavOpen }) => {
   const params = useParams();
@@ -15,7 +16,7 @@ const AdminProduct = ({ isNavOpen }) => {
   const [productList, setProductList] = useState([]);
 
   const fetchProduct = async () => {
-    await axios
+    await client
       .get(`/0/products/${params.lock}`)
       .then((res) => {
         setProductList(res.data);

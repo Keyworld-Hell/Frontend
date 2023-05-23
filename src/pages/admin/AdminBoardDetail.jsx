@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 import { DUMMY_BOARD } from "../../store/nav";
+import client from "../../client";
 
 import axios from "axios";
 
-const SERVER_URL = "http://localhost:3000";
 
 const AdminBoardDetail = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
@@ -16,14 +16,14 @@ const AdminBoardDetail = ({ isNavOpen }) => {
   const params = useParams();
 
   const fetchBoard = async () => {
-    await axios.get(`${SERVER_URL}/board/${params.id}`).then((res) => {
+    await client.get(`/board/${params.id}`).then((res) => {
       setBoardDetail(res.data);
     });
   };
 
   //!TODO: 댓글 조회를 어떻게 하는지 모르겠음
   const fetchComment = async () => {
-    await axios.get(`${SERVER_URL}/board`).then((res) => {
+    await client.get(`/board`).then((res) => {
       setBoardDetail(res.data);
     });
   };
@@ -57,7 +57,7 @@ const AdminBoardDetail = ({ isNavOpen }) => {
           {/*
             !TODO: BOARD_DETAIL을 boardDetail로 수정
           */}
-          {BOARD_DETAIL.map((item, index) => (
+          {boardDetail.map((item, index) => (
             <>
               <div className="board-content f-18 flex center">
                 <div className="admin-board-id ">{item.id}</div>

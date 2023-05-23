@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import client from "../../../client";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 
@@ -10,7 +11,7 @@ const InspectEng = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await axios.get("http://localhost:4000/inspect").then((res) => {
+      await client.get("/1/company").then((res) => {
         if (Array.isArray(res.data)) {
           setData(res.data);
         }

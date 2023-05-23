@@ -61,23 +61,20 @@ const Product = () => {
               <img className="product-content-img" src={item.img} alt={img} />
               <div className="product-sub">
                 <div className="product-title flex f-20 fw-600 color-white flex">
-                  WD-401{item.title}
+                  {item.title}
                 </div>
                 <div className="product-content flex">
                   <div className="product-feat flex">
-                    <b>주요 재질</b> 아연 합금{item.texture}
+                    <b>주요 재질</b> {item.texture}
                   </div>
                   <div className="product-feat flex">
-                    <b>표면 처리</b> 크롬 도금{item.surface}
+                    <b>표면 처리</b> {item.surface}
                   </div>
                   <div className="product-feat flex">
                     <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{item.use}
-                    통신 장비, 배전반, 제어반, 각종 케이스, 각종 산업 기기, 환경
-                    설비
                   </div>
                   <div className="product-feat flex">
                     <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{item.feature}
-                    내구성 우수
                   </div>
                 </div>
               </div>

@@ -48,14 +48,13 @@ const BoardWrite = () => {
     }
     
     const confirmed = window.confirm("게시글을 등록하시겠습니까?");
-
+    const formdata = new FormData();
+    formdata.append("title", title);
+    formdata.append("name", name); 
+    formdata.append("content", content);
     if (confirmed) {
       try {
-        const response = await client.post("/board/new", {
-          title,
-          name,
-          content,
-        });
+        const response = await client.post("/board/new", formdata);
         console.log(response.data);
         navigate("/board"); // 리디렉션
       } catch (error) {
