@@ -4,8 +4,6 @@ import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
 
-const SERVER_URL = "http://localhost:3000";
-
 const AdminInquiry = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(4);
@@ -13,14 +11,16 @@ const AdminInquiry = ({ isNavOpen }) => {
 
   const fetchInquiry = async () => {
     await axios
-      .get(`${SERVER_URL}/inquiry`)
-      .then((res) => setInquiryList(res.data))
+      .get(`/inquiry`)
+      .then((res) => {
+        setInquiryList(res.data.content);
+      })
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
     fetchInquiry();
-  }, [inquiryList]);
+  }, []);
 
   const subContent = (content) => {
     if (content.length > 15) {
@@ -47,8 +47,10 @@ const AdminInquiry = ({ isNavOpen }) => {
         {inquiryList.map((item, index) => (
           <Link to={`${item.id}`} className="color-black" key={index}>
             <div className="admin-notice-box center flex">
-              <div className="admin-inquiry-date">{item.created_date}</div>
-              <div className="admin-inquiry-name">{item.company}</div>
+              <div className="admin-inquiry-date">
+                {item.createdAt.substr(0, 10)}
+              </div>
+              <div className="admin-inquiry-name">{item.name}</div>
               <div className="admin-inquiry-content">
                 {subContent(item.content)}
               </div>
