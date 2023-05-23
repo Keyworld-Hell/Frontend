@@ -8,8 +8,6 @@ import axios from "axios";
 import Pagination from "../../components/pagination/Pagination";
 import AdminCompanyBox from "../../components/admin/AdminCompanyBox";
 
-const SERVER_URL = "http://localhost:3000";
-
 const AdminCertificate = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(1);
@@ -26,14 +24,29 @@ const AdminCertificate = ({ isNavOpen }) => {
   }
 
   const fetchCertificate = async () => {
-    await axios.get(`${SERVER_URL}/0/certification`).then((res) => {
+    await axios.get(`/0/certification`).then((res) => {
       setCertificationList(res.data);
+      console.log(res.data);
     });
+  };
+
+  const deleteClick = (id) => {
+    if (window.confirm("삭제하시겠습니까?")) {
+      axios
+        .delete(`/adm/certification/delete/${id}`)
+        .then((res) => {
+          setCertificationList(
+            certificationList.filter((item) => item.id !== id)
+          );
+          alert("삭제 완료!");
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   useEffect(() => {
     fetchCertificate();
-  }, [certificationList]);
+  }, []);
 
   return (
     <div className="admin-wrap flex">
@@ -55,27 +68,13 @@ const AdminCertificate = ({ isNavOpen }) => {
           </Link>
         </div>
         <div className="admin-tech-container flex">
-          <div className="admin-tech-contents flex">
-            <div className="admin-tech-box">
-              <div className="admin-tech-img">
-                <img src={img} alt={img} />
-              </div>
-              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
-              <button className="admin-tech-btn color-white">X</button>
-            </div>
-          </div>
-          <div className="admin-tech-contents flex">
-            <div className="admin-tech-box">
-              <div className="admin-tech-img">
-                <img src={img} alt={img} />
-              </div>
-              <div className="admin-tech-name flex f-20 fw-700">ISO-9001</div>
-              <button className="admin-tech-btn color-white">X</button>
-            </div>
-          </div>
-
           {certificationList.map((item) => (
-            <AdminCompanyBox img={item.img} name={item.name} />
+            <AdminCompanyBox
+              id={item.id}
+              img={item.img}
+              title={item.title}
+              deleteClick={deleteClick}
+            />
           ))}
         </div>
         {certificationList.length === 0 && (

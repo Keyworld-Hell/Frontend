@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
@@ -12,11 +12,16 @@ const AdminTechUpload = ({ isNavOpen }) => {
 
   const { title } = useParams();
 
-  const initialActiveIndex = title === "certification" ? 1 : 2;
+  const location = useLocation();
 
-  const [fileName, setFileName] = useState("파일을 선택하세요.");
+  const isEng = location.pathname.endsWith("/eng");
+  const initialActiveIndex = title === "certification" ? 1 : 2;
+  const initialSubIndex = isEng ? 1 : 0;
+  const initialFileName = isEng ? "Choose file" : "파일을 선택하세요.";
+
+  const [fileName, setFileName] = useState(initialFileName);
   const [fileImg, setFileImg] = useState();
-  const [activeSubIndex, setActiveSubIndex] = useState(0);
+  const [activeSubIndex, setActiveSubIndex] = useState(initialSubIndex);
   const [activeIndex, setActiveIndex] = useState(initialActiveIndex);
 
   const previewImg = () => {
@@ -35,11 +40,12 @@ const AdminTechUpload = ({ isNavOpen }) => {
     }
 
     const formdata = new FormData();
-    formdata.append("name", nameRef.current.value);
-    formdata.append("file", fileRef.current.files[0]);
+    formdata.append("title", nameRef.current.value);
+    // formdata.append("file", fileRef.current.files[0]);
+    formdata.append("language", String(false));
 
     axios
-      .post(`${SERVER_URL}/adm/${title}/new`, formdata)
+      .post(`/adm/${title}/new`, formdata)
       .then((res) => alert("등록 완료!"))
       .catch((err) => console.log(err));
   };
@@ -66,7 +72,7 @@ const AdminTechUpload = ({ isNavOpen }) => {
         <div className="admin-upload-img">
           {fileImg && <img src={fileImg} alt={fileImg} />}
         </div>
-        <span className="f-20 fw-600">첨부</span>
+        <span className="f-20 fw-600">{isEng ? "File" : "첨부"}</span>
         <div className="admin-upload-file">
           <input
             type="file"
@@ -74,24 +80,23 @@ const AdminTechUpload = ({ isNavOpen }) => {
             ref={fileRef}
             onChange={() => {
               setFileName(fileRef.current.files[0].name);
-              console.log(fileRef.current.files[0]);
               previewImg();
             }}
           />
           <div className="admin-upload-file-box">
             {fileName}
             <label htmlFor="file" className="admin-upload-label color-white">
-              첨부파일
+              {isEng ? "Upload" : "첨부파일"}
             </label>
           </div>
         </div>
 
         <div className="admin-upload-subtitle">
-          <span className="f-20 fw-600">이름</span>
+          <span className="f-20 fw-600">{isEng ? "Name" : "이름"}</span>
         </div>
         <input
           className="admin-upload-tech-name f-20"
-          placeholder="이름"
+          placeholder={isEng ? "Name" : "이름"}
           ref={nameRef}
         />
       </div>
