@@ -18,6 +18,19 @@ const AdminInquiry = ({ isNavOpen }) => {
       .catch((err) => console.log(err));
   };
 
+  const deleteClick = (id, e) => {
+    e.stopPropagation();
+    if (window.confirm("삭제하시겠습니까?")) {
+      axios
+        .delete(`/adm/inquiry/delete/${id}`)
+        .then((res) => {
+          setInquiryList(inquiryList.filter((item) => item.id !== id));
+          alert("삭제 완료!");
+        })
+        .catch((err) => console.log(err));
+    }
+  };
+
   useEffect(() => {
     fetchInquiry();
   }, []);
@@ -54,7 +67,12 @@ const AdminInquiry = ({ isNavOpen }) => {
               <div className="admin-inquiry-content">
                 {subContent(item.content)}
               </div>
-              <div className="admin-inquiry-delete">삭제</div>
+              <div
+                className="admin-inquiry-delete"
+                onClick={(e) => deleteClick(item.id, e)}
+              >
+                삭제
+              </div>
             </div>
           </Link>
         ))}
