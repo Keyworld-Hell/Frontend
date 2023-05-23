@@ -12,13 +12,13 @@ const AdminInquiryDetail = ({ isNavOpen }) => {
 
   const [inquiryDetail, setInquiryDetal] = useState({});
 
-  const inquiry = INQUIRY_LIST.filter(
-    (item) => item.id === Number(params.id)
-  )[0];
+  // const inquiry = INQUIRY_LIST.filter(
+  //   (item) => item.id === Number(params.id)
+  // )[0];
 
   const fetchInquiry = async () => {
     await axios
-      .get(`${SERVER_URL}/inquiry/${params.id}`)
+      .get(`/inquiry/${params.id}`)
       .then((res) => setInquiryDetal(res.data))
       .catch((err) => console.log(err));
   };
@@ -52,23 +52,33 @@ const AdminInquiryDetail = ({ isNavOpen }) => {
           <div className="inquiry-container m-0">
             <div className="inquiry-input">
               <div className="inquiry-subtitle f-20 fw-700">상호명</div>
-              <div className="f-20 admin-inquiry-text">{inquiry.company}</div>
+              <div className="f-20 admin-inquiry-text">
+                {inquiryDetail.title}
+              </div>
             </div>
             <div className="inquiry-input">
               <div className="inquiry-subtitle f-20 fw-700">담당자 이름</div>
-              <div className="f-20 admin-inquiry-text">{inquiry.name}</div>
+              <div className="f-20 admin-inquiry-text">
+                {inquiryDetail.name}
+              </div>
             </div>
             <div className="inquiry-input">
               <div className="inquiry-subtitle f-20 fw-700">이메일</div>
-              <div className="f-20 admin-inquiry-text">{inquiry.email}</div>
+              <div className="f-20 admin-inquiry-text">
+                {inquiryDetail.email}
+              </div>
             </div>
             <div className="inquiry-input">
               <div className="inquiry-subtitle f-20 fw-700">연락처</div>
-              <div className="f-20 admin-inquiry-text">{inquiry.phone}</div>
+              <div className="f-20 admin-inquiry-text">
+                {inquiryDetail.phone}
+              </div>
             </div>
             <div className="inquiry-input">
               <div className="inquiry-subtitle f-20 fw-700">문의 내용</div>
-              <div className="inquiry-content f-20">{inquiry.content}</div>
+              <div className="inquiry-content f-20">
+                {inquiryDetail.content}
+              </div>
             </div>
           </div>
         </div>
