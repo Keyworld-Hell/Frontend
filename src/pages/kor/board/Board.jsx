@@ -14,7 +14,7 @@ const Board = () => {
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    client
+    axios
       .get("/board", {
         params: {
           _page: currentPage,

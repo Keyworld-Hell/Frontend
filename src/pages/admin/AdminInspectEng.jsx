@@ -5,7 +5,6 @@ import img from "../../assets/img/inspect.png";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
-import client from "../../client";
 import Pagination from "../../components/pagination/Pagination";
 import AdminCompanyBox from "../../components/admin/AdminCompanyBox";
 
@@ -25,7 +24,7 @@ const AdminInspectEng = ({ isNavOpen }) => {
   }
 
   const fetchCertificate = async () => {
-    await client.get(`/1/company`).then((res) => {
+    await axios.get(`/1/company`).then((res) => {
       setCompanyList(res.data);
       setPageNumber(res.data.length / 12 + 1);
     });

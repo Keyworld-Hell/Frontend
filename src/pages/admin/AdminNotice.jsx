@@ -3,7 +3,6 @@ import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
 import { Link } from "react-router-dom";
-import client from "../../client";
 
 const AdminNotice = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(0);

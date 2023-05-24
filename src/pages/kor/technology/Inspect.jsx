@@ -3,15 +3,12 @@ import axios from "axios";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 
-import img from "../../../assets/img/inspect.png";
-import client from "../../../client";
-
 const Inspect = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      await client.get("/0/company").then((res) => {
+      await axios.get("/0/company").then((res) => {
         if (Array.isArray(res.data)) {
           setData(res.data);
         }

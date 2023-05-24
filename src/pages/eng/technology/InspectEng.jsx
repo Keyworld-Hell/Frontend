@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import client from "../../../client";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
-
-import img from "../../../assets/img/inspect.png";
 
 const InspectEng = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      await client.get("/1/company").then((res) => {
+      await axios.get("/1/company").then((res) => {
         if (Array.isArray(res.data)) {
           setData(res.data);
         }

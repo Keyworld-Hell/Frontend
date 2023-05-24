@@ -4,7 +4,6 @@ import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 
 import Modal from "../../../components/layout/Modal";
-import client from "../../../client";
 
 const Certificate = () => {
   const [data, setData] = useState([]);

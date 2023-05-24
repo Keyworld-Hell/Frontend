@@ -7,9 +7,6 @@ import axios from "axios";
 import img from "../../../assets/img/key.png";
 import test from "../../../assets/img/iso-9001.png";
 import drawing from "../../../assets/img/drawing.png";
-import client from "../../../client";
-
-
 
 const ProductDetail = () => {
   const [isModal, setIsModal] = useState(false);
@@ -20,7 +17,7 @@ const ProductDetail = () => {
     setIsarrow((isArrow) => !isArrow);
   };
   useEffect(() => {
-    client
+    axios
       .get("/product/1")
       .then((response) => {
         setPRODUCT_KEY(response.data);

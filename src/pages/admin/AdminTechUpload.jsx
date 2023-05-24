@@ -3,7 +3,6 @@ import { useLocation, useParams } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
-import client from "../../client";
 
 const AdminTechUpload = ({ isNavOpen }) => {
   const fileRef = useRef();

@@ -9,14 +9,13 @@ import img from "../../../assets/img/key.png";
 import logo from "../../../assets/img/logo.png";
 
 import { PRODUCT_LIST } from "../../../store";
-import client from "../../../client";
 
 const Product = () => {
   const params = useParams();
-  const[PRODUCT_KEY, setPRODUCT_KEY] = useState([]);
+  const [PRODUCT_KEY, setPRODUCT_KEY] = useState([]);
 
   useEffect(() => {
-    client
+    axios
       .get("/product")
       .then((response) => {
         setPRODUCT_KEY(response.data);
@@ -56,30 +55,40 @@ const Product = () => {
             <button className="color-white f-20">search</button>
           </div>
           {PRODUCT_KEY.map((item, index) => (
-          <Link to={`/product/${params.lock}/${item.id}`} className="color-black">
-            <div className="product-box flex">
-              <img className="product-content-img" src={item.img} alt={img} />
-              <div className="product-sub">
-                <div className="product-title flex f-20 fw-600 color-white flex">
-                  {item.title}
-                </div>
-                <div className="product-content flex">
-                  <div className="product-feat flex">
-                    <b>주요 재질</b> {item.texture}
+            <Link
+              to={`/product/${params.lock}/${item.id}`}
+              className="color-black"
+            >
+              <div className="product-box flex">
+                <img className="product-content-img" src={item.img} alt={img} />
+                <div className="product-sub">
+                  <div className="product-title flex f-20 fw-600 color-white flex">
+                    {item.title}
                   </div>
-                  <div className="product-feat flex">
-                    <b>표면 처리</b> {item.surface}
-                  </div>
-                  <div className="product-feat flex">
-                    <b>용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도</b>{item.use}
-                  </div>
-                  <div className="product-feat flex">
-                    <b>특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징</b>{item.feature}
+                  <div className="product-content flex">
+                    <div className="product-feat flex">
+                      <b>주요 재질</b> {item.texture}
+                    </div>
+                    <div className="product-feat flex">
+                      <b>표면 처리</b> {item.surface}
+                    </div>
+                    <div className="product-feat flex">
+                      <b>
+                        용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도
+                      </b>
+                      {item.use}
+                    </div>
+                    <div className="product-feat flex">
+                      <b>
+                        특&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;징
+                      </b>
+                      {item.feature}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>))}
+            </Link>
+          ))}
           <div className="product-pagination center">pagination</div>
         </div>
       </div>

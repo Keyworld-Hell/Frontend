@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import client from "../../../client";
 import { useNavigate } from "react-router-dom";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
+import axios from "axios";
 
 const InquiryEng = () => {
   const [name, setName] = useState("");
@@ -29,7 +29,7 @@ const InquiryEng = () => {
     formdata.append("phone", phone);
     formdata.append("content", content.replace(/\n/g, "<br />"));
 
-    const response = await client.post("/inquiry/new", formdata);
+    const response = await axios.post("/inquiry/new", formdata);
     console.log(response.data);
     window.alert("Would you like to send an inquiry?");
     navigate("/inquiry");

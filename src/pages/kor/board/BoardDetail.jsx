@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 import keymini from "../../../assets/img/keymini.png";
+import axios from "axios";
 import client from "../../../client";
 
 import { DUMMY_BOARD } from "../../../store/index";
@@ -19,7 +20,7 @@ const BoardDetail = () => {
   );
 
   useEffect(() => {
-    client
+    axios
       .get(`/board/${params.id}`)
       .then((response) => {
         setBoardData(response.data);
@@ -81,9 +82,7 @@ const BoardDetail = () => {
                 KEYWORLD
                 <div className="board-comment-date">{item.date}</div>
               </div>
-              <div className="board-comment-content f-16">
-                {item.comment}
-              </div>
+              <div className="board-comment-content f-16">{item.comment}</div>
             </div>
           ))}
           <div className="board-comment-upload">

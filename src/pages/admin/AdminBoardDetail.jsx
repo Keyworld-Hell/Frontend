@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 import { DUMMY_BOARD } from "../../store/nav";
-import client from "../../client";
 
 import axios from "axios";
-
 
 const AdminBoardDetail = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
@@ -16,14 +14,14 @@ const AdminBoardDetail = ({ isNavOpen }) => {
   const params = useParams();
 
   const fetchBoard = async () => {
-    await client.get(`/board/${params.id}`).then((res) => {
+    await axios.get(`/board/${params.id}`).then((res) => {
       setBoardDetail(res.data);
     });
   };
 
   //!TODO: 댓글 조회를 어떻게 하는지 모르겠음
   const fetchComment = async () => {
-    await client.get(`/board`).then((res) => {
+    await axios.get(`/board`).then((res) => {
       setBoardDetail(res.data);
     });
   };

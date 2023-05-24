@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
-import client from "../../../client";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 
-import Modal from "../../../components/layout/Modal";
+import axios from "axios";
 
 const CertificateEng = () => {
   const [data, setData] = useState([]);
-  const [isModal, setIsModal] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      await client.get("/1/certification").then((res) => {
+      await axios.get("/1/certification").then((res) => {
         if (Array.isArray(res.data)) {
           setData(res.data);
         }

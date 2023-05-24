@@ -20,7 +20,7 @@ const AdminLogin = () => {
       password: password,
     };
 
-    client
+    axios
       .post("/adm", data)
       .then((response) => {
         // 로그인 성공 시 리디렉션

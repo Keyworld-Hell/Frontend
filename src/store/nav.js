@@ -13,7 +13,7 @@ export const NAV_LIST = [
   },
   {
     title: "제품",
-    addr: "/admin/product/circular",
+    addr: "/admin/product/0",
   },
   {
     title: "문의 - Inquiry",

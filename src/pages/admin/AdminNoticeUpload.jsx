@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
-import client from "../../client";
 
 const AdminUpload = ({ isNavOpen }) => {
   const fileRef = useRef();
