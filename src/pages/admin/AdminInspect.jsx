@@ -23,7 +23,7 @@ const AdminInspect = ({ isNavOpen }) => {
     }
   }
 
-  const fetchCertificate = async () => {
+  const fetchCompany = async () => {
     await axios.get(`/0/company`).then((res) => {
       setCompanyList(res.data);
       setPageNumber(res.data.length / 12 + 1);
@@ -43,7 +43,7 @@ const AdminInspect = ({ isNavOpen }) => {
   };
 
   useEffect(() => {
-    fetchCertificate();
+    fetchCompany();
   }, []);
 
   return (

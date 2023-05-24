@@ -9,9 +9,8 @@ const Inspect = () => {
   useEffect(() => {
     const fetchData = async () => {
       await axios.get("/0/company").then((res) => {
-        if (Array.isArray(res.data)) {
-          setData(res.data);
-        }
+        setData(res.data);
+        console.log(res.data);
       });
     };
     fetchData();

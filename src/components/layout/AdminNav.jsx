@@ -10,7 +10,6 @@ const AdminNav = ({
   isNavOpen,
 }) => {
   const { lock } = useParams();
-  console.log(lock);
   const initialProductIndex = lock === undefined ? -1 : lock;
   const [activeProductIndex, setActiveProductIndex] = useState(
     Number(initialProductIndex)
