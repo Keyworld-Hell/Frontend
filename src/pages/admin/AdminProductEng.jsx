@@ -40,11 +40,11 @@ const AdminProductEng = ({ isNavOpen }) => {
       <div className="admin-product-container container m-0">
         <div className="admin-title admin-no-title flex f-20 fw-600">
           <div className="admin-search ">
-            <input className="admin-search-input f-20" placeholder="검색" />
+            <input className="admin-search-input f-20" placeholder="Keyword" />
             <button className="admin-search-btn color-white">search</button>
           </div>
           <Link to={`/admin/product/upload/eng`} className="color-white flex">
-            <button className="admin-upload-btn  color-white">등록</button>
+            <button className="admin-upload-btn  color-white">Upload</button>
           </Link>
         </div>
         <div className="admin-product-list-container flex m-0">
