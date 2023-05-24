@@ -6,17 +6,32 @@ import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
 
 import img from "../../../assets/img/key.png";
-import logo from "../../../assets/img/logo.png";
 
 import { PRODUCT_LIST } from "../../../store";
+import Pagination from "../../../components/Pagination";
+import { PRODUCT_NAV_LIST } from "../../../store/nav";
 
 const Product = () => {
   const params = useParams();
   const [PRODUCT_KEY, setPRODUCT_KEY] = useState([]);
+  const [pageNumber, setPageNumber] = useState(7);
+  const [cur, setCur] = useState(1);
+
+  const { lock } = useParams();
+  const curLock = PRODUCT_NAV_LIST.filter((item) => item.engName === lock)[0]
+    .number;
+
+  const pageList = [];
+
+  if (pageList.length === 0) {
+    for (let i = 1; i <= pageNumber; i++) {
+      pageList.push(i);
+    }
+  }
 
   useEffect(() => {
     axios
-      .get("/product")
+      .get(`/0/products/${curLock}`)
       .then((response) => {
         setPRODUCT_KEY(response.data);
       })
@@ -89,7 +104,9 @@ const Product = () => {
               </div>
             </Link>
           ))}
-          <div className="product-pagination center">pagination</div>
+          {PRODUCT_KEY.length !== 0 && (
+            <Pagination cur={cur} setCur={setCur} pageList={pageList} />
+          )}
         </div>
       </div>
     </>
