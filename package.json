@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/react-helmet": "^6.1.6",
     "axios": "^1.4.0",
+    "netlify-cli": "^15.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -29,7 +30,8 @@
     "include": [
       "/index",
       "/"
-    ]
+    ],
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
