@@ -5,11 +5,8 @@ import img from "../../assets/img/inspect.png";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
-import client from "../../client";
 import Pagination from "../../components/pagination/Pagination";
 import AdminCompanyBox from "../../components/admin/AdminCompanyBox";
-
-
 
 const AdminInspect = ({ isNavOpen }) => {
   const [activeIndex, setActiveIndex] = useState(2);
@@ -27,16 +24,16 @@ const AdminInspect = ({ isNavOpen }) => {
   }
 
   const fetchCertificate = async () => {
-    await client.get(`/0/company`).then((res) => {
+    await axios.get(`/0/company`).then((res) => {
       setCompanyList(res.data);
-      console.log(res.data);
+      setPageNumber(res.data.length / 12 + 1);
     });
   };
 
   const deleteClick = (id) => {
     if (window.confirm("삭제하시겠습니까?")) {
       axios
-        .delete(`/adm/certification/delete/${id}`)
+        .delete(`/adm/company/delete/${id}`)
         .then((res) => {
           setCompanyList(companyList.filter((item) => item.id !== id));
           alert("삭제 완료!");
@@ -87,7 +84,7 @@ const AdminInspect = ({ isNavOpen }) => {
             />
           ))}
         </div>
-        {companyList.length === 0 && (
+        {companyList.length !== 0 && (
           <Pagination cur={cur} setCur={setCur} pageList={pageList} />
         )}
       </div>

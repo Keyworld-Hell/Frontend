@@ -36,8 +36,8 @@ const BoardWrite = () => {
 
     // 필수 항목 누락 확인
     if (!title || !name || !content) {
-        setIsError(true);
-        window.alert("필수 항목을 모두 입력해주세요")
+      setIsError(true);
+      window.alert("필수 항목을 모두 입력해주세요");
       return;
     }
 
@@ -46,15 +46,17 @@ const BoardWrite = () => {
       window.alert("자동 등록 방지 기능을 통과해야 합니다.");
       return;
     }
-    
+
     const confirmed = window.confirm("게시글을 등록하시겠습니까?");
     const formdata = new FormData();
     formdata.append("title", title);
-    formdata.append("name", name); 
+    formdata.append("author", name);
     formdata.append("content", content);
+    formdata.append("password", "kwd");
+    formdata.append("adm", false);
     if (confirmed) {
       try {
-        const response = await client.post("/board/new", formdata);
+        const response = await axios.post("/board/new", formdata);
         console.log(response.data);
         navigate("/board"); // 리디렉션
       } catch (error) {
@@ -130,8 +132,6 @@ const BoardWrite = () => {
                 onChange={handleCaptchaChange}
               />
             </div>
-
-
 
             <div className="center">
               <button className="inquiry-btn color-white" type="submit">

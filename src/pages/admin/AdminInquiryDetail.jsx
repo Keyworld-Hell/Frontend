@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 
-
 import axios from "axios";
 import client from "../../client";
-
-
 
 const AdminInquiryDetail = ({ isNavOpen }) => {
   const params = useParams();
@@ -14,15 +11,17 @@ const AdminInquiryDetail = ({ isNavOpen }) => {
   const [inquiryDetail, setInquiryDetal] = useState({});
 
   const fetchInquiry = async () => {
-    await client
-      .get(`/inquiry/${params.id}`)
-      .then((res) => setInquiryDetal(res.data))
-      .catch((err) => console.log(err));
+    try {
+      const response = await axios.get(`/inquiry/${params.id}`);
+      setInquiryDetal(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
     fetchInquiry();
-  }, [inquiryDetail]);
+  }, []);
 
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(4);

@@ -5,8 +5,6 @@ import AdminNav from "../../components/layout/AdminNav";
 import axios from "axios";
 import client from "../../client";
 
-
-
 const AdminTechUpload = ({ isNavOpen }) => {
   const fileRef = useRef();
   const nameRef = useRef();
@@ -45,7 +43,7 @@ const AdminTechUpload = ({ isNavOpen }) => {
     // formdata.append("file", fileRef.current.files[0]);
     formdata.append("language", String(false));
 
-    client
+    axios
       .post(`/adm/${title}/new`, formdata)
       .then((res) => alert("등록 완료!"))
       .catch((err) => console.log(err));

@@ -12,9 +12,10 @@ const Certificate = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await client.get("/0/certification").then((res) => {
+      await axios.get("/0/certification").then((res) => {
         if (Array.isArray(res.data)) {
           setData(res.data);
+          console.log(res.data);
         }
       });
     };

@@ -65,6 +65,10 @@
   margin: 0 auto;
 }
 
+.mg-t-50 {
+  margin-top: 50px;
+}
+
 .upper {
   text-transform: uppercase;
 }
