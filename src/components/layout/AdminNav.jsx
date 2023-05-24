@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { NAV_LIST, NAV_SUB_LIST, PRODUCT_NAV_LIST } from "../../store/nav";
 
 const AdminNav = ({
@@ -9,7 +9,12 @@ const AdminNav = ({
   setActiveSubIndex,
   isNavOpen,
 }) => {
-  const [activeProductIndex, setActiveProductIndex] = useState(0);
+  const { lock } = useParams();
+  console.log(lock);
+  const initialProductIndex = lock === undefined ? -1 : lock;
+  const [activeProductIndex, setActiveProductIndex] = useState(
+    Number(initialProductIndex)
+  );
 
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -61,32 +66,58 @@ const AdminNav = ({
           </ul>
         </nav>
       )}
-      {activeIndex === 3 && (
-        <nav className="admin-nav-sub">
-          <ul>
-            {PRODUCT_NAV_LIST.map((item, index) => (
-              <Link
-                key={index}
-                to={
-                  activeSubIndex === 0
-                    ? `/admin/product/${item.number}`
-                    : `/admin/product/${item.number}/eng`
-                }
-                className="color-black"
-              >
-                <li
-                  className={
-                    activeProductIndex === index ? "nav-sub-clicked" : ""
+      {activeIndex === 3 &&
+        (activeSubIndex === 0 ? (
+          <nav className="admin-nav-sub">
+            <ul>
+              {PRODUCT_NAV_LIST.map((item, index) => (
+                <Link
+                  key={index}
+                  to={
+                    activeSubIndex === 0
+                      ? `/admin/product/${item.number}`
+                      : `/admin/product/${item.number}/eng`
                   }
-                  onClick={() => setActiveProductIndex(index)}
+                  className="color-black"
                 >
-                  {item.korName}
-                </li>
-              </Link>
-            ))}
-          </ul>
-        </nav>
-      )}
+                  <li
+                    className={
+                      activeProductIndex === index ? "nav-sub-clicked" : ""
+                    }
+                    onClick={() => setActiveProductIndex(index)}
+                  >
+                    {item.korName}
+                  </li>
+                </Link>
+              ))}
+            </ul>
+          </nav>
+        ) : (
+          <nav className="admin-nav-sub">
+            <ul>
+              {PRODUCT_NAV_LIST.map((item, index) => (
+                <Link
+                  key={index}
+                  to={
+                    activeSubIndex === 0
+                      ? `/admin/product/${item.number}`
+                      : `/admin/product/${item.number}/eng`
+                  }
+                  className="color-black"
+                >
+                  <li
+                    className={
+                      activeProductIndex === index ? "nav-sub-clicked" : ""
+                    }
+                    onClick={() => setActiveProductIndex(index)}
+                  >
+                    {item.engName}
+                  </li>
+                </Link>
+              ))}
+            </ul>
+          </nav>
+        ))}
     </div>
   );
 };
