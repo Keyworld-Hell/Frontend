@@ -690,3 +690,7 @@ input[id="check"]:checked + label {
 .admin-login-btn:hover {
   background-color: #ff9831;
 }
+
+.admin-product-upload {
+  margin-left: 50px !important;
+}

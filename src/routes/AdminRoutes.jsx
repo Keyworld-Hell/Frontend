@@ -17,6 +17,7 @@ import AdminCertificateEng from "../pages/admin/AdminCertificateEng";
 import AdminInspectEng from "../pages/admin/AdminInspectEng";
 import AdminProductEng from "../pages/admin/AdminProductEng";
 import AdminUpload from "../pages/admin/AdminNoticeUpload";
+import AdminProductUpload from "../pages/admin/AdminProductUpload";
 
 const AdminRoutes = ({ isNavOpen }) => {
   return (
@@ -46,6 +47,14 @@ const AdminRoutes = ({ isNavOpen }) => {
       <Route
         path="product/:lock/eng"
         element={<AdminProductEng isNavOpen={isNavOpen} />}
+      />
+      <Route
+        path="product/upload"
+        element={<AdminProductUpload isNavOpen={isNavOpen} />}
+      />
+      <Route
+        path="product/upload/eng"
+        element={<AdminProductUpload isNavOpen={isNavOpen} />}
       />
       <Route path="inquiry" element={<AdminInquiry isNavOpen={isNavOpen} />} />
       <Route

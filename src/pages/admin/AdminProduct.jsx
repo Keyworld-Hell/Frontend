@@ -44,7 +44,7 @@ const AdminProduct = ({ isNavOpen }) => {
             <input className="admin-search-input f-20" placeholder="검색" />
             <button className="admin-search-btn color-white">search</button>
           </div>
-          <Link to={`/admin/certificate/upload`} className="color-white flex">
+          <Link to={`/admin/product/upload`} className="color-white flex">
             <button className="admin-upload-btn  color-white">등록</button>
           </Link>
         </div>
