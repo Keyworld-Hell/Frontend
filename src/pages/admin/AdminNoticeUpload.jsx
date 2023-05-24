@@ -7,6 +7,7 @@ const AdminUpload = ({ isNavOpen }) => {
   const fileRef = useRef();
   const dateRef = useRef();
   const contentRef = useRef();
+  const titleRef = useRef();
 
   const [fileName, setFileName] = useState("");
   const [fileImg, setFileImg] = useState();
@@ -34,7 +35,7 @@ const AdminUpload = ({ isNavOpen }) => {
 
     const formdata = new FormData();
     // formdata.append("file", fileRef.current.files[0]);
-    formdata.append("title", "Title!");
+    formdata.append("title", titleRef.current.value);
     formdata.append("content", contentRef.current.value);
     formdata.append("year", dateRef.current.value.substr(0, 4));
     formdata.append("month", dateRef.current.value.substr(5, 2));
@@ -105,6 +106,14 @@ const AdminUpload = ({ isNavOpen }) => {
             }
           />
         </div>
+        <div className="admin-upload-subtitle">
+          <span className="f-20 fw-600">{"제목"}</span>
+        </div>
+        <input
+          className="admin-upload-tech-name f-20"
+          placeholder="제목"
+          ref={titleRef}
+        />
         <div className="admin-upload-subtitle">
           <span className="f-20 fw-600">내용</span>
         </div>
