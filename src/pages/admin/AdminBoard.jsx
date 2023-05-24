@@ -3,16 +3,27 @@ import { Link } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 import axios from "axios";
 import client from "../../client";
+import Pagination from "../../components/pagination/Pagination";
 
 const AdminBoard = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(5);
-
   const [boardList, setBoardList] = useState([]);
+  const [pageNumber, setPageNumber] = useState(7);
+  const [cur, setCur] = useState(1);
+
+  const pageList = [];
+
+  if (pageList.length === 0) {
+    for (let i = 1; i <= pageNumber; i++) {
+      pageList.push(i);
+    }
+  }
 
   const fetchBoard = async () => {
-    await client.get(`/board`).then((res) => {
-      setBoardList(res.data);
+    await axios.get(`/board`).then((res) => {
+      setBoardList(res.data.content);
+      setPageNumber(res.data.content.length);
     });
   };
 
@@ -52,7 +63,9 @@ const AdminBoard = ({ isNavOpen }) => {
               </div>
             </Link>
           ))}
-          <div className="board-pagination center">pagination</div>
+          {boardList.length !== 0 && (
+            <Pagination cur={cur} setCur={setCur} pageList={pageList} />
+          )}
         </div>
       </div>
     </div>
