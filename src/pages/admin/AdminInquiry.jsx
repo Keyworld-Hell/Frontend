@@ -4,19 +4,29 @@ import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
 import client from "../../client";
+import Pagination from "../../components/pagination/Pagination";
 
 const AdminInquiry = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(4);
   const [inquiryList, setInquiryList] = useState([]);
+  const [pageNumber, setPageNumber] = useState(7);
+  const [cur, setCur] = useState(1);
+
+  const pageList = [];
+
+  if (pageList.length === 0) {
+    for (let i = 1; i <= pageNumber; i++) {
+      pageList.push(i);
+    }
+  }
 
   const fetchInquiry = async () => {
-    await client
+    await axios
       .get(`/inquiry`)
-
       .then((res) => {
-        console.log(res);
         setInquiryList(res.data.content);
+        setPageNumber(res.data.content.length / 12 + 1);
       })
       .catch((err) => console.log(err));
   };
@@ -24,7 +34,7 @@ const AdminInquiry = ({ isNavOpen }) => {
   const deleteClick = (id, e) => {
     e.stopPropagation();
     if (window.confirm("삭제하시겠습니까?")) {
-      client
+      axios
         .delete(`/adm/inquiry/delete/${id}`)
         .then((res) => {
           setInquiryList(inquiryList.filter((item) => item.id !== id));
@@ -79,6 +89,11 @@ const AdminInquiry = ({ isNavOpen }) => {
             </div>
           </Link>
         ))}
+        <div className="mg-t-50">
+          {inquiryList.length !== 0 && (
+            <Pagination cur={cur} setCur={setCur} pageList={pageList} />
+          )}
+        </div>
       </div>
     </div>
   );

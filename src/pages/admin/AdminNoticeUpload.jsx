@@ -41,7 +41,7 @@ const AdminUpload = ({ isNavOpen }) => {
     formdata.append("month", dateRef.current.value.substr(5, 2));
     formdata.append("day", dateRef.current.value.substr(8, 2));
 
-    client
+    axios
       .post(`/adm/notice/new`, formdata, {
         headers: {
           "Content-Type": "multipart/form-data",

@@ -25,9 +25,9 @@ const AdminCertificate = ({ isNavOpen }) => {
   }
 
   const fetchCertificate = async () => {
-    await client.get(`/0/certification`).then((res) => {
+    await axios.get(`/0/certification`).then((res) => {
       setCertificationList(res.data);
-      console.log(res.data);
+      setPageNumber(res.data.length / 12 + 1);
     });
   };
 
@@ -78,7 +78,7 @@ const AdminCertificate = ({ isNavOpen }) => {
             />
           ))}
         </div>
-        {certificationList.length === 0 && (
+        {certificationList.length !== 0 && (
           <Pagination cur={cur} setCur={setCur} pageList={pageList} />
         )}
       </div>

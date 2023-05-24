@@ -27,7 +27,7 @@ const AdminInspectEng = ({ isNavOpen }) => {
   const fetchCertificate = async () => {
     await client.get(`/1/company`).then((res) => {
       setCompanyList(res.data);
-      console.log(res.data);
+      setPageNumber(res.data.length / 12 + 1);
     });
   };
 
@@ -76,7 +76,7 @@ const AdminInspectEng = ({ isNavOpen }) => {
             />
           ))}
         </div>
-        {companyList.length === 0 && (
+        {companyList.length !== 0 && (
           <Pagination cur={cur} setCur={setCur} pageList={pageList} />
         )}
       </div>

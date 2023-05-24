@@ -12,7 +12,7 @@ const AdminNotice = ({ isNavOpen }) => {
   const [noticeList, setNoticeList] = useState([]);
 
   const fetchNotice = async () => {
-    await client
+    await axios
       .get(`/adm/notice`)
       .then((res) => {
         setNoticeList(res.data);
@@ -22,13 +22,15 @@ const AdminNotice = ({ isNavOpen }) => {
   };
 
   const deleteClick = (id) => {
-    axios
-      .delete(`/adm/notice/delete/${id}`)
-      .then((res) => {
-        setNoticeList(noticeList.filter((item) => item.id !== id));
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
+    if (window.confirm("삭제하시겠습니까?")) {
+      axios
+        .delete(`/adm/notice/delete/${id}`)
+        .then((res) => {
+          setNoticeList(noticeList.filter((item) => item.id !== id));
+          console.log(res);
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   useEffect(() => {
