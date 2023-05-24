@@ -406,3 +406,13 @@ header {
     background-color: #244497;
   }
 }
+
+.modal-close-btn {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+.modal-title {
+  margin-bottom: 30px;
+}

@@ -4,20 +4,35 @@ import container from "../assets/img/container.jpeg";
 import product1 from "../assets/img/kiosk.jpg";
 import train from "../assets/img/train.jpeg";
 import auto from "../assets/img/auto.jpg";
+import NoticeModal from "../components/layout/Modal";
+import axios from "axios";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [notice, setNotice] = useState({});
 
   const updateScroll = () => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
   };
 
+  const fetchNotice = async () => {
+    await axios
+      .get(`/notice`)
+      .then((res) => {
+        console.log(res);
+        setNotice(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", updateScroll);
+    fetchNotice();
   }, []);
   return (
     <>
       <div className="color-background pt-70">
+        <NoticeModal title={notice.title} content={notice.content} />
         <div className="home-img center">
           <div className="home-text  color-blue">Quality & Trust</div>
           <div className="home-sub-text  color-white">

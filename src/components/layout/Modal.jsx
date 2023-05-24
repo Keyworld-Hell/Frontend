@@ -1,40 +1,55 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-const Modal = (props) => {
-  useEffect(() => {
-    const modalWrapper = document.querySelector(".modal-wrapper");
+import Modal from "react-modal";
 
-    const handleClickOutside = (event) => {
-      if (event.target === modalWrapper) {
-        event.stopPropagation();
-      }
-    };
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    width: "400px",
+    height: "400px",
+  },
+  overlay: {
+    background: "rgba(0, 0, 0, 0.5)",
+  },
+};
 
-    modalWrapper.addEventListener("click", handleClickOutside);
+const NoticeModal = ({ title, content }) => {
+  const [isModal, setIsModal] = useState(true);
+  // useEffect(() => {
+  //   const modalWrapper = document.querySelector(".modal-wrapper");
 
-    return () => {
-      modalWrapper.removeEventListener("click", handleClickOutside);
-      document.body.style.overflow = "auto";
-    };
-  }, []);
+  //   const handleClickOutside = (event) => {
+  //     if (event.target === modalWrapper) {
+  //       event.stopPropagation();
+  //     }
+  //   };
+
+  //   modalWrapper.addEventListener("click", handleClickOutside);
+
+  //   return () => {
+  //     modalWrapper.removeEventListener("click", handleClickOutside);
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, []);
 
   return (
-    <div className="modal-wrapper">
-      <div className="modal-container flex">
-        <div className="modal-content flex">
-          
-            <img src={props.img} alt={props.title} />
-            <button
-              className="modal-btn color-white cursor f-30"
-              onClick={() => props.setIsModal(false)}
-            >
-              X
-            </button>
-
-        </div>
+    <Modal
+      isOpen={isModal}
+      style={customStyles}
+      onRequestClose={() => setIsModal(false)}
+    >
+      <div className="modal-close-btn cursor" onClick={() => setIsModal(false)}>
+        X
       </div>
-    </div>
+      <div className="modal-title f-20 fw-600">{title}</div>
+      <div className="modal-content">{content}</div>
+    </Modal>
   );
 };
 
-export default Modal;
+export default NoticeModal;
