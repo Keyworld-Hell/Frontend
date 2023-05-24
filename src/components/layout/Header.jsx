@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import logo from "../../assets/img/logo.png";
 import us from "../../assets/img/us.png";
@@ -22,27 +22,12 @@ const Header = () => {
           <nav className="header-nav f-20 flex fw-700">
             <ul className="header-ul center">
               <a href={`/intro`} className={"color-black"}>
-                <li
-                  onMouseOut={() => setIsHover(false)}
-                  onMouseOver={() => setIsHover(true)}
-                >
-                  기업정보
-                </li>
+                <li onMouseOver={() => setIsHover(true)}>기업정보</li>
               </a>
               <a href="/certificate" className={"color-black"}>
-                <li
-                  onMouseOut={() => setIsHover(false)}
-                  onMouseOver={() => setIsHover(true)}
-                >
-                  기술소개
-                </li>
+                <li onMouseOver={() => setIsHover(true)}>기술소개</li>
               </a>
-              <li
-                onMouseOut={() => setIsHover(false)}
-                onMouseOver={() => setIsHover(true)}
-              >
-                제품소개
-              </li>
+              <li onMouseOver={() => setIsHover(true)}>제품소개</li>
               <a href="/inquiry" className="color-black">
                 <li>문의하기</li>
               </a>

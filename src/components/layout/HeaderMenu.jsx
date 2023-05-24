@@ -8,24 +8,14 @@ const HeaderMenu = ({ setIsHover }) => {
         <nav className="header-nav f-20 flex fw-600">
           <ul className="header-menu-ul center ">
             <li
-              onMouseOver={() => setIsHover(true)}
-              onMouseOut={() => setIsHover(false)}
+              onMouseEnter={() => setIsHover(true)}
+              onMouseLeave={() => setIsHover(false)}
             >
               <div>
                 <a href={`/intro`} className={"color-white"}>
                   회사 소개
                 </a>
               </div>
-              {/* <div>
-                <a href={`/organization`} className={"color-white"}>
-                  조직도
-                </a>
-              </div> */}
-              {/* <div>
-                <a href={`/future`} className={"color-white"}>
-                  미래
-                </a>
-              </div> */}
               <div>
                 <a href={`/contact`} className={"color-white"}>
                   오시는 길
@@ -33,8 +23,8 @@ const HeaderMenu = ({ setIsHover }) => {
               </div>
             </li>
             <li
-              onMouseOver={() => setIsHover(true)}
-              onMouseOut={() => setIsHover(false)}
+              onMouseEnter={() => setIsHover(true)}
+              onMouseLeave={() => setIsHover(false)}
             >
               <div>
                 <a href={`/certificate`} className={"color-white"}>
@@ -48,8 +38,8 @@ const HeaderMenu = ({ setIsHover }) => {
               </div>
             </li>
             <li
-              onMouseOver={() => setIsHover(true)}
-              onMouseOut={() => setIsHover(false)}
+              onMouseEnter={() => setIsHover(true)}
+              onMouseLeave={() => setIsHover(false)}
             >
               <div>
                 <a href={`/product/circularlock`} className={"color-white"}>
