@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
-import client from "../../client";
+
 import Pagination from "../../components/pagination/Pagination";
 
 const AdminInquiry = ({ isNavOpen }) => {

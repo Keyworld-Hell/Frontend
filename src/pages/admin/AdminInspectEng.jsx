@@ -33,7 +33,7 @@ const AdminInspectEng = ({ isNavOpen }) => {
   const deleteClick = (id) => {
     if (window.confirm("삭제하시겠습니까?")) {
       axios
-        .delete(`/adm/certification/delete/${id}`)
+        .delete(`adm/certification/delete/${id}`)
         .then((res) => {
           setCompanyList(companyList.filter((item) => item.id !== id));
           alert("삭제 완료!");

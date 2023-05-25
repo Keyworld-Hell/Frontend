@@ -3,7 +3,6 @@ import AdminNav from "../../components/layout/AdminNav";
 
 import img from "../../assets/img/inspect.png";
 import { Link } from "react-router-dom";
-
 import axios from "axios";
 import Pagination from "../../components/pagination/Pagination";
 import AdminCompanyBox from "../../components/admin/AdminCompanyBox";

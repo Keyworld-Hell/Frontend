@@ -9,6 +9,7 @@ import client from "../../client";
 import Pagination from "../../components/pagination/Pagination";
 import AdminCompanyBox from "../../components/admin/AdminCompanyBox";
 
+
 const AdminCertificate = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(1);
@@ -25,7 +26,7 @@ const AdminCertificate = ({ isNavOpen }) => {
   }
 
   const fetchCertificate = async () => {
-    await axios.get(`/0/certification`).then((res) => {
+    await axios.get(`0/certification`).then((res) => {
       setCertificationList(res.data);
       setPageNumber(res.data.length / 12 + 1);
     });

@@ -3,6 +3,7 @@ import AdminNav from "../../components/layout/AdminNav";
 
 import axios from "axios";
 
+
 const AdminUpload = ({ isNavOpen }) => {
   const fileRef = useRef();
   const dateRef = useRef();
@@ -42,7 +43,7 @@ const AdminUpload = ({ isNavOpen }) => {
     formdata.append("day", dateRef.current.value.substr(8, 2));
 
     axios
-      .post(`/adm/notice/new`, formdata, {
+      .post(`adm/notice/new`, formdata, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

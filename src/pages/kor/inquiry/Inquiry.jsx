@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
+import client from "../../../client";
 
 const Inquiry = () => {
   const [name, setName] = useState("");
@@ -29,7 +30,7 @@ const Inquiry = () => {
     formdata.append("phone", phone);
     formdata.append("content", content.replace(/\n/g, "<br />"));
 
-    const response = await axios.post("/inquiry/new", formdata);
+    const response = await client.post("inquiry/new", formdata);
     console.log(response.data);
     window.alert("문의를 보내시겠습니까?");
     navigate("/inquiry");

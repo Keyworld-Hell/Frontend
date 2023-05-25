@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import client from "../../client";
 
+import { useParams } from "react-router-dom";
 const AdminLogin = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");

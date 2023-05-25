@@ -5,6 +5,7 @@ import axios from "axios";
 import client from "../../client";
 import Pagination from "../../components/pagination/Pagination";
 
+
 const AdminBoard = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(5);

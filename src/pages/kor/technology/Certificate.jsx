@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PageImage from "../../../components/layout/PageImage";
 import PageTitle from "../../../components/layout/PageTitle";
-
+import { baseURL } from "../../../baseurl";
 import Modal from "../../../components/layout/Modal";
 
 const Certificate = () => {

@@ -5,6 +5,7 @@ import { DUMMY_BOARD } from "../../store/nav";
 
 import axios from "axios";
 
+
 const AdminBoardDetail = ({ isNavOpen }) => {
   const [activeSubIndex, setActiveSubIndex] = useState(1);
   const [activeIndex, setActiveIndex] = useState(5);

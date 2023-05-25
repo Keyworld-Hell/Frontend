@@ -6,6 +6,7 @@ import train from "../assets/img/train.jpeg";
 import auto from "../assets/img/auto.jpg";
 import NoticeModal from "../components/layout/Modal";
 import axios from "axios";
+import { baseURL } from "../baseurl";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
