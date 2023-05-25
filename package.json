@@ -21,11 +21,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI = react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "react-snap",
-    "predeploy": "npm run build"
+    "postbuild": "react-snap"
   },
   "reactSnap": {
     "include": [
